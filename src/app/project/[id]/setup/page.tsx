@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
+import Link from "next/link";
 
 const foundationFiles = [
   {
@@ -70,6 +71,15 @@ export default function SetupPage() {
 
   return (
     <div className="max-w-4xl mx-auto">
+      {/* Breadcrumb */}
+      <nav className="flex items-center gap-1.5 text-sm mb-6 overflow-x-auto">
+        <Link href="/" className="text-muted hover:text-coral transition-colors shrink-0">Projects</Link>
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} className="text-muted/40 shrink-0"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
+        <Link href={`/project/${projectId}`} className="text-muted hover:text-coral transition-colors shrink-0">{projectId}</Link>
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} className="text-muted/40 shrink-0"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
+        <span className="text-navy font-medium shrink-0">Context Setup</span>
+      </nav>
+
       <div className="mb-8">
         <h1 className="font-[family-name:var(--font-heading)] text-2xl sm:text-3xl text-navy">
           Context Setup

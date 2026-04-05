@@ -1,6 +1,16 @@
 import Link from "next/link";
 import { getProjects } from "@/lib/data";
 import { StatusBadge, VerdictBadge } from "@/components/StatusBadge";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects — Combo D Dashboard",
+  description: "PM Agent Chain analysis results dashboard",
+  openGraph: {
+    title: "Combo D — PM Agent Chain Dashboard",
+    description: "Client-facing viewer for PM Agent Chain results",
+  },
+};
 
 export default async function HomePage() {
   const projects = await getProjects();

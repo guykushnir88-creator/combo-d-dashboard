@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, forwardRef, useImperativeHandle } from "react";
 import { GateBadge } from "./StatusBadge";
 
 /* ── Types ── */
@@ -16,7 +16,7 @@ interface Agent {
   id: number;
   name: string;
   phase: string;
-  runTime: string;
+  runTime: string | null;
   docsProduced: number;
   gate: string;
   gateColor: string;
@@ -73,16 +73,24 @@ const severityOrder: Record<string, number> = { critical: 0, high: 1, medium: 2,
 type SortKey = "id" | "pattern" | "severity" | "cluster" | "source" | "title";
 type SortDir = "asc" | "desc";
 
-export function ProjectTabs({
-  agents,
-  knowledgeBase,
-  governance,
-}: {
+export interface ProjectTabsHandle {
+  switchToDocsAgent: (agentId: number) => void;
+}
+
+export const ProjectTabs = forwardRef<ProjectTabsHandle, {
   agents: Agent[];
   knowledgeBase: KBEntry[];
   governance: GovernanceItem[];
-}) {
+}>(function ProjectTabs({ agents, knowledgeBase, governance }, ref) {
   const [activeTab, setActiveTab] = useState<Tab>("Documents");
+  const [focusAgentId, setFocusAgentId] = useState<number | null>(null);
+
+  useImperativeHandle(ref, () => ({
+    switchToDocsAgent(agentId: number) {
+      setActiveTab("Documents");
+      setFocusAgentId(agentId);
+    },
+  }));
 
   return (
     <div>
@@ -109,19 +117,28 @@ export function ProjectTabs({
         ))}
       </div>
 
-      {activeTab === "Documents" && <DocumentsPanel agents={agents} />}
+      {activeTab === "Documents" && <DocumentsPanel agents={agents} focusAgentId={focusAgentId} onFocusHandled={() => setFocusAgentId(null)} />}
       {activeTab === "Knowledge Base" && <KnowledgeBasePanel knowledgeBase={knowledgeBase} />}
       {activeTab === "Governance" && <GovernancePanel governance={governance} />}
     </div>
   );
-}
+});
 
 /* ════════════════════════════════════════════════════
    1. DOCUMENTS PANEL
    ════════════════════════════════════════════════════ */
 
-function DocumentsPanel({ agents }: { agents: Agent[] }) {
+function DocumentsPanel({ agents, focusAgentId, onFocusHandled }: { agents: Agent[]; focusAgentId?: number | null; onFocusHandled?: () => void }) {
   const [expandedAgent, setExpandedAgent] = useState<number | null>(1);
+
+  useEffect(() => {
+    if (focusAgentId != null) {
+      setExpandedAgent(focusAgentId);
+      const el = document.getElementById(`agent-${focusAgentId}`);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      onFocusHandled?.();
+    }
+  }, [focusAgentId, onFocusHandled]);
   const [expandedDoc, setExpandedDoc] = useState<string | null>(null);
 
   return (
@@ -367,8 +384,8 @@ function KnowledgeBasePanel({ knowledgeBase }: { knowledgeBase: KBEntry[] }) {
         />
       </div>
 
-      {/* Table */}
-      <div className="bg-card rounded-xl border border-border overflow-hidden mb-6">
+      {/* Desktop table */}
+      <div className="hidden md:block bg-card rounded-xl border border-border overflow-hidden mb-6">
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
@@ -413,60 +430,7 @@ function KnowledgeBasePanel({ knowledgeBase }: { knowledgeBase: KBEntry[] }) {
                       <td className="px-4 py-3 text-xs text-muted whitespace-nowrap">{entry.source}</td>
                       <td className="px-4 py-3 text-navy">{entry.title}</td>
                     </tr>
-                    {isExpanded && (
-                      <tr className="bg-ice/30">
-                        <td colSpan={6} className="px-6 py-4">
-                          <div className="max-w-3xl space-y-3">
-                            <div>
-                              <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-1">Insight</p>
-                              <p className="text-sm text-foreground/80">{entry.insight}</p>
-                            </div>
-                            {entry.detectionSignal && (
-                              <div>
-                                <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-1">Detection Signal</p>
-                                <p className="text-sm text-foreground/80">{entry.detectionSignal}</p>
-                              </div>
-                            )}
-                            {entry.prevention && (
-                              <div>
-                                <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-1">Prevention Rule</p>
-                                <p className="text-sm text-green font-medium">{entry.prevention}</p>
-                              </div>
-                            )}
-                            <div className="flex flex-wrap gap-4 pt-2 border-t border-border">
-                              <div>
-                                <p className="text-xs text-muted">Source</p>
-                                <p className="text-sm font-medium text-navy">{entry.source}</p>
-                              </div>
-                              <div>
-                                <p className="text-xs text-muted">Tags</p>
-                                <div className="flex flex-wrap gap-1 mt-0.5">
-                                  {entry.tags.map((tag) => (
-                                    <span key={tag} className="text-xs px-2 py-0.5 rounded bg-ice text-muted">{tag}</span>
-                                  ))}
-                                </div>
-                              </div>
-                              {entry.relatedEntries && entry.relatedEntries.length > 0 && (
-                                <div>
-                                  <p className="text-xs text-muted">Related</p>
-                                  <div className="flex flex-wrap gap-1 mt-0.5">
-                                    {entry.relatedEntries.map((re) => (
-                                      <button
-                                        key={re}
-                                        onClick={(e) => { e.stopPropagation(); setExpandedRow(re); }}
-                                        className="text-xs px-2 py-0.5 rounded bg-blue/10 text-blue font-medium hover:bg-blue/20"
-                                      >
-                                        {re}
-                                      </button>
-                                    ))}
-                                  </div>
-                                </div>
-                              )}
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                    )}
+                    {isExpanded && <KBExpandedRow entry={entry} onRelatedClick={(re) => setExpandedRow(re)} />}
                   </Fragment>
                 );
               })}
@@ -480,6 +444,58 @@ function KnowledgeBasePanel({ knowledgeBase }: { knowledgeBase: KBEntry[] }) {
             </tbody>
           </table>
         </div>
+      </div>
+
+      {/* Mobile card layout */}
+      <div className="md:hidden space-y-3 mb-6">
+        {filtered.map((entry) => {
+          const isExpanded = expandedRow === entry.id;
+          return (
+            <div
+              key={entry.id}
+              onClick={() => setExpandedRow(isExpanded ? null : entry.id)}
+              className={`bg-card rounded-xl border border-border p-4 cursor-pointer transition-all ${isExpanded ? "ring-2 ring-coral/20" : ""}`}
+            >
+              <div className="flex items-start justify-between gap-2 mb-2">
+                <div className="flex items-center gap-2 min-w-0">
+                  <span className="text-xs font-mono text-muted shrink-0">{entry.id}</span>
+                  <h4 className="text-sm font-semibold text-navy truncate">{entry.title}</h4>
+                </div>
+                {severityBadge(entry.severity)}
+              </div>
+              <div className="flex flex-wrap gap-1.5 mb-2">
+                <span className="text-xs px-2 py-0.5 rounded bg-navy/5 text-navy font-medium">{entry.pattern}</span>
+                <span className="text-xs px-2 py-0.5 rounded bg-ice text-muted">{entry.cluster}</span>
+              </div>
+              <p className="text-xs text-muted">{entry.source}</p>
+              {isExpanded && (
+                <div className="mt-3 pt-3 border-t border-border space-y-2">
+                  <p className="text-sm text-foreground/80">{entry.insight}</p>
+                  {entry.detectionSignal && (
+                    <div>
+                      <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-0.5">Detection</p>
+                      <p className="text-xs text-foreground/70">{entry.detectionSignal}</p>
+                    </div>
+                  )}
+                  {entry.prevention && (
+                    <div>
+                      <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-0.5">Prevention</p>
+                      <p className="text-xs text-green font-medium">{entry.prevention}</p>
+                    </div>
+                  )}
+                  <div className="flex flex-wrap gap-1 pt-1">
+                    {entry.tags.map((tag) => (
+                      <span key={tag} className="text-xs px-2 py-0.5 rounded bg-ice text-muted">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          );
+        })}
+        {filtered.length === 0 && (
+          <p className="text-center text-muted py-8 text-sm">No entries match your search.</p>
+        )}
       </div>
 
       {/* Prevention Playbook */}
@@ -538,6 +554,64 @@ function KnowledgeBasePanel({ knowledgeBase }: { knowledgeBase: KBEntry[] }) {
 
 /* We need Fragment for the table rows */
 import { Fragment } from "react";
+
+/* Shared expanded row for KB table */
+function KBExpandedRow({ entry, onRelatedClick }: { entry: KBEntry; onRelatedClick: (id: string) => void }) {
+  return (
+    <tr className="bg-ice/30">
+      <td colSpan={6} className="px-6 py-4">
+        <div className="max-w-3xl space-y-3">
+          <div>
+            <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-1">Insight</p>
+            <p className="text-sm text-foreground/80">{entry.insight}</p>
+          </div>
+          {entry.detectionSignal && (
+            <div>
+              <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-1">Detection Signal</p>
+              <p className="text-sm text-foreground/80">{entry.detectionSignal}</p>
+            </div>
+          )}
+          {entry.prevention && (
+            <div>
+              <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-1">Prevention Rule</p>
+              <p className="text-sm text-green font-medium">{entry.prevention}</p>
+            </div>
+          )}
+          <div className="flex flex-wrap gap-4 pt-2 border-t border-border">
+            <div>
+              <p className="text-xs text-muted">Source</p>
+              <p className="text-sm font-medium text-navy">{entry.source}</p>
+            </div>
+            <div>
+              <p className="text-xs text-muted">Tags</p>
+              <div className="flex flex-wrap gap-1 mt-0.5">
+                {entry.tags.map((tag) => (
+                  <span key={tag} className="text-xs px-2 py-0.5 rounded bg-ice text-muted">{tag}</span>
+                ))}
+              </div>
+            </div>
+            {entry.relatedEntries && entry.relatedEntries.length > 0 && (
+              <div>
+                <p className="text-xs text-muted">Related</p>
+                <div className="flex flex-wrap gap-1 mt-0.5">
+                  {entry.relatedEntries.map((re) => (
+                    <button
+                      key={re}
+                      onClick={(e) => { e.stopPropagation(); onRelatedClick(re); }}
+                      className="text-xs px-2 py-0.5 rounded bg-blue/10 text-blue font-medium hover:bg-blue/20"
+                    >
+                      {re}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </td>
+    </tr>
+  );
+}
 
 /* ════════════════════════════════════════════════════
    3. GOVERNANCE PANEL

@@ -3,8 +3,19 @@ import "./globals.css";
 import { Sidebar } from "@/components/Sidebar";
 
 export const metadata: Metadata = {
-  title: "Combo D — PM Agent Chain Dashboard",
+  title: {
+    default: "Combo D — PM Agent Chain Dashboard",
+    template: "%s — Combo D",
+  },
   description: "Client-facing viewer for PM Agent Chain results",
+  openGraph: {
+    title: "Combo D — PM Agent Chain Dashboard",
+    description: "Client-facing viewer for PM Agent Chain results",
+    type: "website",
+  },
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({

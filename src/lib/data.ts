@@ -48,3 +48,15 @@ export async function getGovernance(projectId: string) {
     return [];
   }
 }
+
+export async function getAssessment(projectId: string) {
+  try {
+    const raw = await fs.readFile(
+      path.join(dataDir, projectId, "assessment.json"),
+      "utf-8"
+    );
+    return JSON.parse(raw);
+  } catch {
+    return null;
+  }
+}

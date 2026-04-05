@@ -1,0 +1,57 @@
+{
+  "overallScore": 1.6,
+  "overallLevel": "Ad Hoc",
+  "dimensions": [
+    {
+      "name": "Project Initiation",
+      "score": 2,
+      "level": "Repeatable",
+      "recommendation": "Establish a standardized initiation checklist that includes mandatory charter sign-off, PM assignment verification, and budget validation before any planning begins."
+    },
+    {
+      "name": "Planning & Estimation",
+      "score": 2,
+      "level": "Repeatable",
+      "recommendation": "Implement bottom-up estimation as standard practice. Require scope baseline sign-off before schedule development. Add estimation accuracy tracking across projects."
+    },
+    {
+      "name": "Risk Management",
+      "score": 1,
+      "level": "Ad Hoc",
+      "recommendation": "Critical gap: No active risk management exists. Establish a risk review cadence (minimum bi-weekly), assign risk owners, and track closure rates. Zero risks closed is a systemic failure."
+    },
+    {
+      "name": "Quality & Governance",
+      "score": 1,
+      "level": "Ad Hoc",
+      "recommendation": "Critical gap: No governance mechanisms exist. Establish a steering committee with decision rights, implement gate reviews with objective criteria, and create a change control board."
+    },
+    {
+      "name": "Knowledge Management",
+      "score": 1,
+      "level": "Ad Hoc",
+      "recommendation": "Critical gap: No organizational learning mechanism. Implement post-phase retrospectives, create a searchable lessons-learned database, and mandate knowledge transfer in project handoffs."
+    },
+    {
+      "name": "Process Standardization",
+      "score": 2,
+      "level": "Repeatable",
+      "recommendation": "Some processes are followed but not consistently. Document the PM methodology, create templates for key artifacts, and establish process compliance reviews."
+    },
+    {
+      "name": "Stakeholder Management",
+      "score": 2,
+      "level": "Repeatable",
+      "recommendation": "Stakeholders are identified but not actively managed. Implement a communication cadence, establish success criteria alignment workshops, and create an escalation protocol."
+    }
+  ],
+  "configRecommendation": {
+    "co_pilot_enabled": true,
+    "co_pilot_detail": "full",
+    "knowledge_base_enabled": true,
+    "gate_checks_enabled": true,
+    "detailed_budget_analysis": true,
+    "risk_simulation": true,
+    "stakeholder_sentiment": true
+  }
+}
