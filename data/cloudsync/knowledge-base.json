@@ -1,0 +1,112 @@
+[
+  {
+    "id": "KB-001",
+    "cluster": "Budget & Financial",
+    "title": "Budget Gap Pattern",
+    "severity": "critical",
+    "pattern": "budget-underestimation",
+    "insight": "Bottom-up estimate ($1.55M) exceeds client budget ($850K) by 45%. This gap was detectable from the brief but not flagged by the client.",
+    "source": "Agent 1 — Initiation",
+    "tags": ["budget", "gap-analysis", "risk"],
+    "actionable": true
+  },
+  {
+    "id": "KB-002",
+    "cluster": "Budget & Financial",
+    "title": "No Contingency Allocated",
+    "severity": "high",
+    "pattern": "missing-contingency",
+    "insight": "Client budget includes zero contingency reserve. Industry standard for migration projects is 15-25%.",
+    "source": "Agent 2 — Planning",
+    "tags": ["budget", "contingency", "best-practice"],
+    "actionable": true
+  },
+  {
+    "id": "KB-003",
+    "cluster": "Governance & Decision-Making",
+    "title": "No Project Manager Assigned",
+    "severity": "critical",
+    "pattern": "missing-role",
+    "insight": "Project has no assigned PM. All coordination currently handled ad-hoc by department heads with competing priorities.",
+    "source": "Agent 1 — Initiation",
+    "tags": ["governance", "staffing", "blocker"],
+    "actionable": true
+  },
+  {
+    "id": "KB-004",
+    "cluster": "Governance & Decision-Making",
+    "title": "Decision Debt Accumulation",
+    "severity": "critical",
+    "pattern": "decision-debt",
+    "insight": "4 critical decisions remain unmade after full analysis cycle. Each decision blocks downstream execution. Pattern: decisions deferred to avoid conflict.",
+    "source": "Agent 3 — Execution",
+    "tags": ["governance", "decisions", "pattern"],
+    "actionable": true
+  },
+  {
+    "id": "KB-005",
+    "cluster": "Governance & Decision-Making",
+    "title": "Unsigned Project Charter",
+    "severity": "high",
+    "pattern": "missing-authorization",
+    "insight": "Project charter drafted but unsigned. No formal authority to proceed. Team operating on verbal approvals only.",
+    "source": "Agent 4 — Monitoring",
+    "tags": ["governance", "authorization", "risk"],
+    "actionable": true
+  },
+  {
+    "id": "KB-006",
+    "cluster": "Risk Management",
+    "title": "Zero Risks Closed",
+    "severity": "critical",
+    "pattern": "stale-risk-register",
+    "insight": "22 risks identified across agents but zero have been closed or mitigated. Risk register is growing without active management.",
+    "source": "Agent 4 — Monitoring",
+    "tags": ["risk", "governance", "pattern"],
+    "actionable": true
+  },
+  {
+    "id": "KB-007",
+    "cluster": "Scope & Requirements",
+    "title": "Scope Not Confirmed",
+    "severity": "high",
+    "pattern": "scope-ambiguity",
+    "insight": "Full migration vs phased approach not decided. Two parallel schedules maintained: compressed (25 weeks) vs phased (55 weeks). 2.2x variance.",
+    "source": "Agent 2 — Planning",
+    "tags": ["scope", "schedule", "decision"],
+    "actionable": true
+  },
+  {
+    "id": "KB-008",
+    "cluster": "Technical Architecture",
+    "title": "Legacy System Dependencies",
+    "severity": "medium",
+    "pattern": "legacy-coupling",
+    "insight": "HR system tightly coupled with 3 downstream systems. Migration requires coordinated cutover or parallel running period not in current plan.",
+    "source": "Agent 2 — Planning",
+    "tags": ["technical", "dependencies", "architecture"],
+    "actionable": true
+  },
+  {
+    "id": "KB-009",
+    "cluster": "Stakeholder & Communication",
+    "title": "Stakeholder Misalignment",
+    "severity": "high",
+    "pattern": "stakeholder-conflict",
+    "insight": "CFO focused on cost containment, CTO focused on technical completeness, HR Director focused on minimal disruption. No aligned success criteria.",
+    "source": "Agent 1 — Initiation",
+    "tags": ["stakeholders", "alignment", "communication"],
+    "actionable": true
+  },
+  {
+    "id": "KB-010",
+    "cluster": "Quality & Validation",
+    "title": "Go-Live Confidence at 25%",
+    "severity": "critical",
+    "pattern": "low-confidence",
+    "insight": "Composite readiness score of 25% based on 8/10 gate criteria failing. Primary driver: governance gaps, not technical issues.",
+    "source": "Agent 5 — Validation",
+    "tags": ["quality", "readiness", "governance"],
+    "actionable": false
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "GOV-001",
+    "title": "Hire Project Manager",
+    "status": "PENDING",
+    "owner": "CFO (Maria Santos)",
+    "deadline": "2026-04-15",
+    "impact": "Blocks all execution",
+    "relatedDefects": ["DEF-001"],
+    "evidence": null
+  },
+  {
+    "id": "GOV-002",
+    "title": "Confirm Budget ($1.55M)",
+    "status": "PENDING",
+    "owner": "CFO (Maria Santos)",
+    "deadline": "2026-04-20",
+    "impact": "Cannot proceed with phased approach",
+    "relatedDefects": ["DEF-002"],
+    "evidence": null
+  },
+  {
+    "id": "GOV-003",
+    "title": "Confirm Scope (Full vs Phased)",
+    "status": "PENDING",
+    "owner": "CEO / Steering Committee",
+    "deadline": "2026-04-25",
+    "impact": "Schedule depends on scope decision",
+    "relatedDefects": ["DEF-003"],
+    "evidence": null
+  },
+  {
+    "id": "GOV-004",
+    "title": "Sign Project Charter",
+    "status": "PENDING",
+    "owner": "CFO (Maria Santos)",
+    "deadline": "2026-04-18",
+    "impact": "No authority to proceed",
+    "relatedDefects": ["DEF-004"],
+    "evidence": null
+  }
+]

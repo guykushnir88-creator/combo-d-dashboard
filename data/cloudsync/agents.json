@@ -1,0 +1,119 @@
+[
+  {
+    "id": 1,
+    "name": "Initiation",
+    "phase": "Requirements",
+    "runTime": "11 min",
+    "docsProduced": 8,
+    "gate": "PASS WITH CONDITIONS",
+    "gateColor": "green",
+    "summary": "Extracted 30 requirements from 9-item brief. Complexity 40/50. Budget gap: 45%. 15 risks identified.",
+    "documents": [
+      { "id": "01", "title": "Context Analysis", "subtitle": "12 claims verified, 10 gaps found" },
+      { "id": "02", "title": "Project Charter", "subtitle": "SMART objectives, 6 constraints" },
+      { "id": "03", "title": "Statement of Work", "subtitle": "12 deliverables with acceptance criteria" },
+      { "id": "04", "title": "Business Case", "subtitle": "3-scenario analysis, $700K gap" },
+      { "id": "05", "title": "Requirements Catalog", "subtitle": "30 requirements, MoSCoW classified" },
+      { "id": "06", "title": "Stakeholder Register", "subtitle": "15 stakeholders, influence matrix" },
+      { "id": "07", "title": "Co-Pilot Analysis", "subtitle": "4 biases detected, 6 blind spots" },
+      { "id": "08", "title": "Knowledge Log", "subtitle": "15 entries, 7 clusters" }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Planning",
+    "phase": "WBS + Schedule",
+    "runTime": "22 min",
+    "docsProduced": 10,
+    "gate": "PASS WITH CONDITIONS",
+    "gateColor": "green",
+    "summary": "52-task WBS. Bottom-up budget: $1.55M. Dual schedules. 22 risks with response plans.",
+    "documents": [
+      { "id": "01", "title": "Context Analysis", "subtitle": "Planning assumptions verified" },
+      { "id": "02", "title": "WBS", "subtitle": "52 tasks, 100% requirement traceability" },
+      { "id": "03", "title": "Project Schedule", "subtitle": "Compressed (25%) vs Phased (55%)" },
+      { "id": "04", "title": "Budget", "subtitle": "$1.55M bottom-up, $700K gap" },
+      { "id": "05", "title": "Risk Register", "subtitle": "22 risks with response plans" },
+      { "id": "06", "title": "Sprint Plan", "subtitle": "8 waves across 12 sprints" },
+      { "id": "07", "title": "Wave Execution Plan", "subtitle": "8 waves with dependencies" },
+      { "id": "08", "title": "Communication Plan", "subtitle": "3-tier reporting framework" },
+      { "id": "09", "title": "Co-Pilot Analysis", "subtitle": "Budget gap dominant concern" },
+      { "id": "10", "title": "Knowledge Log", "subtitle": "8 new entries" }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Execution",
+    "phase": "Sprint Management",
+    "runTime": "22 min",
+    "docsProduced": 9,
+    "gate": "PARTIAL",
+    "gateColor": "amber",
+    "summary": "Sprint-ready task board. 4 change requests, 11 blockers. Decision debt pattern discovered.",
+    "documents": [
+      { "id": "01", "title": "Sprint Dashboard", "subtitle": "Task board with assignments" },
+      { "id": "02", "title": "Change Requests", "subtitle": "4 CRs, 2 high priority" },
+      { "id": "03", "title": "Blocker Register", "subtitle": "11 blockers, 7 decision-dependent" },
+      { "id": "04", "title": "Resource Allocation", "subtitle": "Team capacity vs demand" },
+      { "id": "05", "title": "Dependency Map", "subtitle": "Cross-stream dependencies" },
+      { "id": "06", "title": "Progress Report", "subtitle": "Sprint velocity tracking" },
+      { "id": "07", "title": "Issue Log", "subtitle": "Decision debt pattern identified" },
+      { "id": "08", "title": "Co-Pilot Analysis", "subtitle": "Governance gaps escalated" },
+      { "id": "09", "title": "Knowledge Log", "subtitle": "6 new entries" }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Monitoring",
+    "phase": "KPI + Governance",
+    "runTime": "19 min",
+    "docsProduced": 8,
+    "gate": "NO-GO",
+    "gateColor": "red",
+    "summary": "8/10 gate criteria FAIL. Go-live confidence: 25%. Zero risks closed.",
+    "documents": [
+      { "id": "01", "title": "KPI Dashboard", "subtitle": "8/10 criteria failing" },
+      { "id": "02", "title": "Gate Assessment", "subtitle": "NO-GO recommendation" },
+      { "id": "03", "title": "Risk Status", "subtitle": "Zero risks closed" },
+      { "id": "04", "title": "Earned Value Report", "subtitle": "CPI and SPI tracking" },
+      { "id": "05", "title": "Governance Report", "subtitle": "Decision backlog critical" },
+      { "id": "06", "title": "Escalation Matrix", "subtitle": "4 items requiring C-suite" },
+      { "id": "07", "title": "Co-Pilot Analysis", "subtitle": "Systemic governance failure" },
+      { "id": "08", "title": "Knowledge Log", "subtitle": "5 new entries" }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Validation",
+    "phase": "Quality Gate",
+    "runTime": "17 min",
+    "docsProduced": 5,
+    "gate": "FAIL — Grade F (62.9%)",
+    "gateColor": "red",
+    "summary": "All 4 critical defects are governance gaps. 3/8 truths FAILED.",
+    "documents": [
+      { "id": "01", "title": "Quality Report", "subtitle": "Grade F — 62.9% score" },
+      { "id": "02", "title": "Defect Register", "subtitle": "4 critical, all governance" },
+      { "id": "03", "title": "Truth Validation", "subtitle": "3/8 truths failed" },
+      { "id": "04", "title": "Co-Pilot Analysis", "subtitle": "Root cause: decision debt" },
+      { "id": "05", "title": "Knowledge Log", "subtitle": "3 new entries" }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Closing",
+    "phase": "Knowledge Base",
+    "runTime": "16 min",
+    "docsProduced": 5,
+    "gate": "ANALYSIS CLOSURE",
+    "gateColor": "navy",
+    "summary": "36 prevention rules. 39 KB entries. 'This project needs 4 decisions, not more analysis.'",
+    "documents": [
+      { "id": "01", "title": "Lessons Learned", "subtitle": "36 prevention rules extracted" },
+      { "id": "02", "title": "Knowledge Base", "subtitle": "39 entries across 7 clusters" },
+      { "id": "03", "title": "Handoff Package", "subtitle": "Executive summary + actions" },
+      { "id": "04", "title": "Co-Pilot Analysis", "subtitle": "Final recommendations" },
+      { "id": "05", "title": "Knowledge Log", "subtitle": "2 final entries" }
+    ]
+  }
+]

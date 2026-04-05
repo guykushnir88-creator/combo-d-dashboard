@@ -1,0 +1,36 @@
+[
+  {
+    "id": "cloudsync",
+    "name": "CloudSync HR Migration",
+    "client": "CloudSync Inc.",
+    "status": "analysis-complete",
+    "lastRun": "2026-04-05",
+    "agents": {
+      "completed": 6,
+      "total": 6
+    },
+    "verdict": "FAIL",
+    "verdictGrade": "F",
+    "verdictScore": 62.9,
+    "kbEntries": 39,
+    "docsProduced": 45,
+    "runTime": "91 min"
+  },
+  {
+    "id": "combo-d",
+    "name": "Combo D Dashboard",
+    "client": "Internal",
+    "status": "in-progress",
+    "lastRun": "2026-04-05",
+    "agents": {
+      "completed": 1,
+      "total": 6
+    },
+    "verdict": "PASS WITH CONDITIONS",
+    "verdictGrade": null,
+    "verdictScore": null,
+    "kbEntries": 12,
+    "docsProduced": 8,
+    "runTime": "13 min"
+  }
+]
