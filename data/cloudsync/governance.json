@@ -5,9 +5,11 @@
     "status": "PENDING",
     "owner": "CFO (Maria Santos)",
     "deadline": "2026-04-15",
-    "impact": "Blocks all execution",
+    "impact": "Blocks all execution — no coordination capacity for any workstream",
     "relatedDefects": ["DEF-001"],
-    "evidence": null
+    "relatedKB": ["KB-001", "KB-004", "KB-035"],
+    "evidence": null,
+    "lastUpdated": null
   },
   {
     "id": "GOV-002",
@@ -15,9 +17,11 @@
     "status": "PENDING",
     "owner": "CFO (Maria Santos)",
     "deadline": "2026-04-20",
-    "impact": "Cannot proceed with phased approach",
+    "impact": "Cannot finalize scope, resource plan, or vendor agreements",
     "relatedDefects": ["DEF-002"],
-    "evidence": null
+    "relatedKB": ["KB-009", "KB-010", "KB-026"],
+    "evidence": null,
+    "lastUpdated": null
   },
   {
     "id": "GOV-003",
@@ -25,9 +29,11 @@
     "status": "PENDING",
     "owner": "CEO / Steering Committee",
     "deadline": "2026-04-25",
-    "impact": "Schedule depends on scope decision",
+    "impact": "Schedule depends on scope — 25 weeks vs 55 weeks variance",
     "relatedDefects": ["DEF-003"],
-    "evidence": null
+    "relatedKB": ["KB-011", "KB-030", "KB-034"],
+    "evidence": null,
+    "lastUpdated": null
   },
   {
     "id": "GOV-004",
@@ -35,8 +41,10 @@
     "status": "PENDING",
     "owner": "CFO (Maria Santos)",
     "deadline": "2026-04-18",
-    "impact": "No authority to proceed",
+    "impact": "No formal authority to proceed — team operating on verbal approvals only",
     "relatedDefects": ["DEF-004"],
-    "evidence": null
+    "relatedKB": ["KB-003", "KB-005", "KB-006"],
+    "evidence": null,
+    "lastUpdated": null
   }
 ]

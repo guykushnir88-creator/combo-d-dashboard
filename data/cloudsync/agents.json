@@ -9,14 +9,54 @@
     "gateColor": "green",
     "summary": "Extracted 30 requirements from 9-item brief. Complexity 40/50. Budget gap: 45%. 15 risks identified.",
     "documents": [
-      { "id": "01", "title": "Context Analysis", "subtitle": "12 claims verified, 10 gaps found" },
-      { "id": "02", "title": "Project Charter", "subtitle": "SMART objectives, 6 constraints" },
-      { "id": "03", "title": "Statement of Work", "subtitle": "12 deliverables with acceptance criteria" },
-      { "id": "04", "title": "Business Case", "subtitle": "3-scenario analysis, $700K gap" },
-      { "id": "05", "title": "Requirements Catalog", "subtitle": "30 requirements, MoSCoW classified" },
-      { "id": "06", "title": "Stakeholder Register", "subtitle": "15 stakeholders, influence matrix" },
-      { "id": "07", "title": "Co-Pilot Analysis", "subtitle": "4 biases detected, 6 blind spots" },
-      { "id": "08", "title": "Knowledge Log", "subtitle": "15 entries, 7 clusters" }
+      {
+        "id": "01",
+        "title": "Context Analysis",
+        "subtitle": "12 claims verified, 10 gaps found",
+        "content": "The Context Analysis verified 12 claims from the project brief against industry benchmarks and available evidence. Of these, 10 information gaps were identified that require stakeholder clarification before planning can proceed with confidence.\n\nKey findings include: the $850K budget falls 45% below industry benchmarks for a migration of this complexity (40/50 on the complexity index). The stated 6-month timeline assumes parallel workstreams that require a dedicated PM — a role not currently filled. Three critical assumptions about legacy system compatibility remain unverified.\n\nThe analysis recommends a structured discovery workshop with IT, HR, and Finance stakeholders to close the top 5 information gaps before committing to a delivery approach."
+      },
+      {
+        "id": "02",
+        "title": "Project Charter",
+        "subtitle": "SMART objectives, 6 constraints",
+        "content": "The Project Charter establishes CloudSync HR Migration as a strategic initiative to replace the 15-year-old on-premise HR system with a cloud-based platform. Six SMART objectives were defined, each with measurable success criteria and target dates.\n\nSix binding constraints were identified: (1) $850K budget ceiling set by board, (2) zero tolerance for payroll disruption, (3) GDPR and local data regulation compliance, (4) existing vendor contract termination window closes Q3 2026, (5) HR team cannot be pulled from operations for more than 20% capacity, (6) no parallel system run exceeding 90 days.\n\nThe charter remains UNSIGNED. Without executive sign-off, the project has no formal authority to proceed, creating governance risk from day one."
+      },
+      {
+        "id": "03",
+        "title": "Statement of Work",
+        "subtitle": "12 deliverables with acceptance criteria",
+        "content": "The Statement of Work defines 12 discrete deliverables spanning data migration, system configuration, integration development, testing, training, and go-live support. Each deliverable includes acceptance criteria, estimated effort, and a responsible party.\n\nNotable gaps: three deliverables (data cleansing, integration testing, rollback procedures) have acceptance criteria that reference standards not yet agreed upon by stakeholders. The SOW assumes a phased delivery model, but this conflicts with the compressed timeline option still under consideration.\n\nTotal estimated effort across all deliverables is 4,200 person-hours, which at current team capacity would require 14 months — significantly exceeding the 6-month aspiration."
+      },
+      {
+        "id": "04",
+        "title": "Business Case",
+        "subtitle": "3-scenario analysis, $700K gap",
+        "content": "The Business Case presents three scenarios: (1) Full migration in compressed timeline — $1.55M, 25 weeks, high risk; (2) Phased migration — $1.35M, 55 weeks, moderate risk; (3) Minimal viable migration — $950K, 35 weeks, reduced scope.\n\nAll three scenarios exceed the $850K budget. The gap ranges from $100K (Scenario 3) to $700K (Scenario 1). ROI analysis shows break-even at 18 months post-go-live for Scenario 2, assuming full adoption and no scope changes.\n\nThe business case highlights that the true cost of inaction (maintaining the legacy system) is approximately $280K/year in maintenance, compliance risk, and lost productivity — making the migration financially justified over a 3-year horizon regardless of scenario chosen."
+      },
+      {
+        "id": "05",
+        "title": "Requirements Catalog",
+        "subtitle": "30 requirements, MoSCoW classified",
+        "content": "The Requirements Catalog captures 30 requirements extracted from the project brief, stakeholder interviews, and compliance documentation. Each requirement is classified using MoSCoW prioritization: 12 Must-Have, 8 Should-Have, 6 Could-Have, and 4 Won't-Have (this phase).\n\nThe 12 Must-Have requirements alone represent approximately 70% of the total effort, confirming that even a minimum viable scope is substantial. Requirements R-07 (real-time payroll sync) and R-12 (multi-jurisdiction compliance) carry the highest complexity scores and dependency chains.\n\nTraceability matrix links each requirement to its source (brief item, stakeholder, or regulation), enabling impact analysis if scope reduction is needed."
+      },
+      {
+        "id": "06",
+        "title": "Stakeholder Register",
+        "subtitle": "15 stakeholders, influence matrix",
+        "content": "The Stakeholder Register identifies 15 individuals across 4 organizational levels with direct or indirect influence on project outcomes. An influence-interest matrix maps each stakeholder to a quadrant determining engagement strategy.\n\nThree stakeholders sit in the high-influence, high-interest quadrant: CFO Maria Santos (budget authority), CTO James Chen (technical direction), and HR Director Lisa Park (operational impact). Their priorities conflict: Santos prioritizes cost containment, Chen wants technical completeness, and Park demands minimal disruption to HR operations.\n\nThis misalignment is flagged as a root cause risk — without a formal alignment mechanism (steering committee with decision rights), these competing priorities will generate scope creep, timeline pressure, and decision paralysis."
+      },
+      {
+        "id": "07",
+        "title": "Co-Pilot Analysis",
+        "subtitle": "4 biases detected, 6 blind spots",
+        "content": "The Co-Pilot Analysis performed adversarial review of all Initiation outputs, detecting 4 cognitive biases and 6 analytical blind spots in the agent's own work.\n\nBiases detected: (1) Anchoring on client's $850K figure rather than bottom-up estimates, (2) Optimism bias in timeline assumptions for data migration, (3) Authority bias — accepting stakeholder claims without verification, (4) Completeness bias — assuming the 9-item brief captures all requirements.\n\nBlind spots identified include: no consideration of organizational change management, no assessment of team's cloud migration experience, underweighting vendor selection risk, missing data quality assessment, no rollback cost estimation, and insufficient attention to the parallel-run logistics."
+      },
+      {
+        "id": "08",
+        "title": "Knowledge Log",
+        "subtitle": "15 entries, 7 clusters",
+        "content": "The Knowledge Log captures 15 learning entries generated during the Initiation phase, organized into 7 thematic clusters. Each entry includes a detection signal (how the issue was found), severity assessment, and a prevention rule for future projects.\n\nDominant cluster: Decision/Governance (4 entries), reflecting the pattern that governance gaps were detectable from the earliest phase. The budget gap pattern (KB-001) and missing PM role (KB-003) were both identifiable from the project brief alone.\n\nThe log establishes the baseline for the project's knowledge base, which will accumulate entries from each subsequent agent. Early patterns suggest this project's primary risk is organizational, not technical."
+      }
     ]
   },
   {
@@ -29,16 +69,66 @@
     "gateColor": "green",
     "summary": "52-task WBS. Bottom-up budget: $1.55M. Dual schedules. 22 risks with response plans.",
     "documents": [
-      { "id": "01", "title": "Context Analysis", "subtitle": "Planning assumptions verified" },
-      { "id": "02", "title": "WBS", "subtitle": "52 tasks, 100% requirement traceability" },
-      { "id": "03", "title": "Project Schedule", "subtitle": "Compressed (25%) vs Phased (55%)" },
-      { "id": "04", "title": "Budget", "subtitle": "$1.55M bottom-up, $700K gap" },
-      { "id": "05", "title": "Risk Register", "subtitle": "22 risks with response plans" },
-      { "id": "06", "title": "Sprint Plan", "subtitle": "8 waves across 12 sprints" },
-      { "id": "07", "title": "Wave Execution Plan", "subtitle": "8 waves with dependencies" },
-      { "id": "08", "title": "Communication Plan", "subtitle": "3-tier reporting framework" },
-      { "id": "09", "title": "Co-Pilot Analysis", "subtitle": "Budget gap dominant concern" },
-      { "id": "10", "title": "Knowledge Log", "subtitle": "8 new entries" }
+      {
+        "id": "01",
+        "title": "Context Analysis",
+        "subtitle": "Planning assumptions verified",
+        "content": "The Planning Context Analysis reviewed 18 assumptions carried forward from Initiation, verifying each against planning outputs. 11 assumptions held, 4 required revision, and 3 were invalidated entirely.\n\nThe most significant invalidation: the assumption that existing staff could absorb migration work within current capacity. Bottom-up task estimation shows a 40% capacity gap, requiring either new hires, contractor support, or significant scope reduction."
+      },
+      {
+        "id": "02",
+        "title": "WBS",
+        "subtitle": "52 tasks, 100% requirement traceability",
+        "content": "The Work Breakdown Structure decomposes the project into 52 tasks across 8 work packages. Every task traces back to at least one requirement from the catalog, achieving 100% traceability. No orphan tasks exist.\n\nCritical path analysis identifies 23 tasks on the longest dependency chain, spanning data assessment, migration development, integration testing, and go-live. The critical path alone requires 28 weeks with zero slack, making the compressed 25-week schedule extremely fragile.\n\nThree tasks carry the highest risk scores: T-17 (legacy data cleansing), T-31 (payroll integration testing), and T-44 (parallel run validation). Each depends on decisions not yet made by the steering committee."
+      },
+      {
+        "id": "03",
+        "title": "Project Schedule",
+        "subtitle": "Compressed (25%) vs Phased (55%)",
+        "content": "Two schedule options were developed to reflect the unresolved scope decision. The Compressed Schedule targets 25 weeks with maximum parallel workstreams, requiring a full team from day one and accepting high risk. The Phased Schedule spans 55 weeks with sequential waves, reducing risk but extending timeline and cost.\n\nBoth schedules assume a dedicated Project Manager starts by week 2 — a role that remains unfilled. Without this hire, neither schedule is executable."
+      },
+      {
+        "id": "04",
+        "title": "Budget",
+        "subtitle": "$1.55M bottom-up, $700K gap",
+        "content": "Bottom-up cost estimation from the WBS yields a total project cost of $1.55M for the full scope compressed approach. This includes labor ($980K), vendor licensing ($210K), infrastructure ($140K), contingency ($120K), and training/change management ($100K).\n\nThe $700K gap between the bottom-up estimate and the $850K client budget is the single largest risk to project viability. Even the minimal viable scope (Scenario 3) exceeds the budget by $100K."
+      },
+      {
+        "id": "05",
+        "title": "Risk Register",
+        "subtitle": "22 risks with response plans",
+        "content": "The Risk Register catalogs 22 identified risks, each with probability, impact, risk score, response strategy, and assigned owner. 6 risks are rated Critical, 9 High, 5 Medium, and 2 Low.\n\nThe top 3 risks by score: (1) Budget insufficiency — no mitigation possible without scope or budget decision, (2) No PM assigned — blocks all execution planning, (3) Stakeholder misalignment — competing priorities without resolution mechanism. All three are governance risks, not technical risks."
+      },
+      {
+        "id": "06",
+        "title": "Sprint Plan",
+        "subtitle": "8 waves across 12 sprints",
+        "content": "The Sprint Plan organizes 52 WBS tasks into 8 delivery waves across 12 two-week sprints (phased approach) or 6 compressed sprints. Each wave has entry criteria, exit criteria, and a mini-gate review.\n\nWave dependencies are strict: Waves 1-2 (foundation) must complete before Waves 3-5 (build) can begin. This serial dependency is the primary driver of the 55-week phased timeline."
+      },
+      {
+        "id": "07",
+        "title": "Wave Execution Plan",
+        "subtitle": "8 waves with dependencies",
+        "content": "Detailed execution plan for each of the 8 waves, including task assignments, resource loading, dependency maps, and handoff protocols. Each wave specifies exactly which team members are needed and when.\n\nWave 4 (Integration Development) is identified as the highest-risk wave due to its dependency on three external vendor APIs, legacy system access, and the unresolved technical architecture decision."
+      },
+      {
+        "id": "08",
+        "title": "Communication Plan",
+        "subtitle": "3-tier reporting framework",
+        "content": "A three-tier communication framework was designed: (1) Weekly team standups with task-level status, (2) Bi-weekly steering committee briefings with milestone-level reporting, (3) Monthly executive dashboards with strategic KPIs.\n\nThe plan identifies communication gaps in the current project: no regular stakeholder alignment forum exists, and decisions are being deferred because there is no formal escalation path."
+      },
+      {
+        "id": "09",
+        "title": "Co-Pilot Analysis",
+        "subtitle": "Budget gap dominant concern",
+        "content": "The Co-Pilot's adversarial review of Planning outputs confirms the budget gap as the dominant concern. The analysis notes that all planning documents assume the budget gap will be resolved, but no planning document addresses what happens if it isn't.\n\nAdditional concerns: the WBS task estimates carry ±30% uncertainty ranges that are not reflected in the schedule's critical path analysis. The risk register correctly identifies governance risks but underweights the probability of continued decision paralysis."
+      },
+      {
+        "id": "10",
+        "title": "Knowledge Log",
+        "subtitle": "8 new entries",
+        "content": "8 new knowledge entries were added during Planning, bringing the running total to 23. New patterns detected: timeline-pressure (compressed schedule has 3 days of total float), scope-fiction (planning for unconfirmed scope), and resource-constraint (40% capacity gap).\n\nThe Planning phase knowledge confirms the Initiation finding: this project's challenges are primarily governance and organizational, not technical."
+      }
     ]
   },
   {
@@ -51,15 +141,60 @@
     "gateColor": "amber",
     "summary": "Sprint-ready task board. 4 change requests, 11 blockers. Decision debt pattern discovered.",
     "documents": [
-      { "id": "01", "title": "Sprint Dashboard", "subtitle": "Task board with assignments" },
-      { "id": "02", "title": "Change Requests", "subtitle": "4 CRs, 2 high priority" },
-      { "id": "03", "title": "Blocker Register", "subtitle": "11 blockers, 7 decision-dependent" },
-      { "id": "04", "title": "Resource Allocation", "subtitle": "Team capacity vs demand" },
-      { "id": "05", "title": "Dependency Map", "subtitle": "Cross-stream dependencies" },
-      { "id": "06", "title": "Progress Report", "subtitle": "Sprint velocity tracking" },
-      { "id": "07", "title": "Issue Log", "subtitle": "Decision debt pattern identified" },
-      { "id": "08", "title": "Co-Pilot Analysis", "subtitle": "Governance gaps escalated" },
-      { "id": "09", "title": "Knowledge Log", "subtitle": "6 new entries" }
+      {
+        "id": "01",
+        "title": "Sprint Dashboard",
+        "subtitle": "Task board with assignments",
+        "content": "The Sprint Dashboard provides a Kanban-style view of all 52 tasks, organized by wave and sprint. Current simulation shows 0 tasks in progress (project not yet authorized), 52 in backlog, and 0 complete.\n\nThe dashboard highlights that 7 tasks cannot be started until governance decisions are made. These 7 tasks sit on the critical path, meaning every day of decision delay adds at least one day to the project timeline."
+      },
+      {
+        "id": "02",
+        "title": "Change Requests",
+        "subtitle": "4 CRs, 2 high priority",
+        "content": "Four change requests were generated during execution simulation: CR-001 (add data quality assessment phase — HIGH), CR-002 (extend parallel run from 60 to 90 days — HIGH), CR-003 (add vendor evaluation step — MEDIUM), CR-004 (include change management training — LOW).\n\nBoth high-priority CRs would increase budget and timeline. Without a Change Control Board (which requires a PM to chair), these CRs cannot be formally evaluated or approved."
+      },
+      {
+        "id": "03",
+        "title": "Blocker Register",
+        "subtitle": "11 blockers, 7 decision-dependent",
+        "content": "11 execution blockers were identified, of which 7 are directly dependent on unmade governance decisions. The blocker dependency map shows that resolving GOV-001 (Hire PM) would unblock 4 items, while GOV-003 (Confirm Scope) would unblock 3 items.\n\nThis pattern — 'decision debt accumulating' — is the single most important finding of the Execution phase. The project is not blocked by technical complexity but by organizational indecision."
+      },
+      {
+        "id": "04",
+        "title": "Resource Allocation",
+        "subtitle": "Team capacity vs demand",
+        "content": "Resource loading analysis shows peak demand of 12 FTEs during Waves 3-5, against current available capacity of 7 FTEs. The 40% gap requires either hiring, contracting, or scope reduction. No resource acquisition plan exists because budget has not been confirmed."
+      },
+      {
+        "id": "05",
+        "title": "Dependency Map",
+        "subtitle": "Cross-stream dependencies",
+        "content": "Visual dependency map showing 34 inter-task dependencies across 8 waves. 12 dependencies cross work-package boundaries, creating coordination complexity that requires daily PM oversight. Three circular dependency risks were identified where two tasks each wait on the other's output."
+      },
+      {
+        "id": "06",
+        "title": "Progress Report",
+        "subtitle": "Sprint velocity tracking",
+        "content": "Baseline velocity metrics established for tracking. Target velocity: 8-10 tasks per sprint (phased) or 15-18 tasks per sprint (compressed). Burn-down projections show the compressed schedule has zero margin for velocity drops below 90% of target."
+      },
+      {
+        "id": "07",
+        "title": "Issue Log",
+        "subtitle": "Decision debt pattern identified",
+        "content": "The Issue Log documents the 'decision debt' pattern: each deferred decision generates 2-3 downstream blockers, which in turn create uncertainty that defers further decisions. This feedback loop is the dominant dynamic in the project's current state.\n\nThe log recommends a single 'Decision Sprint' — a focused 2-week period where all 4 governance decisions are made — as the most effective intervention."
+      },
+      {
+        "id": "08",
+        "title": "Co-Pilot Analysis",
+        "subtitle": "Governance gaps escalated",
+        "content": "The Co-Pilot escalates governance gaps from 'risk' to 'blocker' status. The analysis argues that continuing analysis without governance decisions is generating diminishing returns — each subsequent agent phase will identify the same root cause.\n\nRecommendation: pause the chain and return to stakeholders with a clear decision framework before proceeding to Monitoring."
+      },
+      {
+        "id": "09",
+        "title": "Knowledge Log",
+        "subtitle": "6 new entries",
+        "content": "6 new entries bring the running total to 29. The Execution phase introduced the 'decision-debt-accumulating' pattern tag, which becomes the most frequently occurring pattern across the entire knowledge base. New cluster identified: 'Optimism/Self-Assessment' — the project team's belief that decisions will resolve themselves."
+      }
     ]
   },
   {
@@ -72,14 +207,54 @@
     "gateColor": "red",
     "summary": "8/10 gate criteria FAIL. Go-live confidence: 25%. Zero risks closed.",
     "documents": [
-      { "id": "01", "title": "KPI Dashboard", "subtitle": "8/10 criteria failing" },
-      { "id": "02", "title": "Gate Assessment", "subtitle": "NO-GO recommendation" },
-      { "id": "03", "title": "Risk Status", "subtitle": "Zero risks closed" },
-      { "id": "04", "title": "Earned Value Report", "subtitle": "CPI and SPI tracking" },
-      { "id": "05", "title": "Governance Report", "subtitle": "Decision backlog critical" },
-      { "id": "06", "title": "Escalation Matrix", "subtitle": "4 items requiring C-suite" },
-      { "id": "07", "title": "Co-Pilot Analysis", "subtitle": "Systemic governance failure" },
-      { "id": "08", "title": "Knowledge Log", "subtitle": "5 new entries" }
+      {
+        "id": "01",
+        "title": "KPI Dashboard",
+        "subtitle": "8/10 criteria failing",
+        "content": "The KPI Dashboard tracks 10 project health indicators. Current status: 8 FAIL, 1 AT RISK, 1 PASS. The only passing indicator is 'Documentation Completeness' (the chain itself produces comprehensive docs). The at-risk indicator is 'Requirements Coverage' (all requirements are documented but not validated).\n\nFailing indicators include: Budget Confirmed (NO), PM Assigned (NO), Schedule Baselined (NO), Risk Mitigation Active (NO), Stakeholder Alignment (NO), Scope Confirmed (NO), Resource Plan Approved (NO), and Charter Signed (NO)."
+      },
+      {
+        "id": "02",
+        "title": "Gate Assessment",
+        "subtitle": "NO-GO recommendation",
+        "content": "Formal gate assessment yields a NO-GO recommendation. The assessment uses a weighted scoring model where governance criteria carry 2x weight. With 8/10 criteria failing and all failures in governance-weighted categories, the composite score is 15/100 — well below the 70/100 threshold for conditional approval.\n\nThe gate assessment explicitly states: 'This project should not proceed to execution until the 4 governance decisions are resolved. Proceeding without them will result in rework, scope conflict, and likely project failure.'"
+      },
+      {
+        "id": "03",
+        "title": "Risk Status",
+        "subtitle": "Zero risks closed",
+        "content": "Of 22 identified risks, zero have been closed or actively mitigated. 6 risks have increased in probability since identification. The risk register is growing (3 new risks added in Monitoring) without any being resolved. This 'risk accumulation without closure' pattern indicates absent risk management governance."
+      },
+      {
+        "id": "04",
+        "title": "Earned Value Report",
+        "subtitle": "CPI and SPI tracking",
+        "content": "Earned Value baseline established but cannot be meaningfully calculated — no work has been authorized, so Earned Value = $0, Planned Value = $0 (no approved baseline), and Actual Cost = analysis cost only. CPI and SPI are undefined.\n\nThe EV report highlights an irony: the project has spent resources on analysis without formal budget approval, meaning the analysis cost itself is unbudgeted."
+      },
+      {
+        "id": "05",
+        "title": "Governance Report",
+        "subtitle": "Decision backlog critical",
+        "content": "The Governance Report provides a consolidated view of all 4 pending decisions, their interdependencies, and the cascading impact of continued delay. A decision dependency map shows GOV-001 (Hire PM) should be resolved first as it unblocks the process for the remaining three decisions.\n\nEstimated cost of each week of continued indecision: $15K in direct costs (team time on planning without authority) plus $35K in opportunity cost (delayed benefits realization)."
+      },
+      {
+        "id": "06",
+        "title": "Escalation Matrix",
+        "subtitle": "4 items requiring C-suite",
+        "content": "All 4 governance decisions require C-suite authority. The escalation matrix shows that Maria Santos (CFO) is the decision-maker for 3 of 4 items, creating a single point of failure in the governance chain. If Santos is unavailable or unwilling to decide, the entire project remains blocked."
+      },
+      {
+        "id": "07",
+        "title": "Co-Pilot Analysis",
+        "subtitle": "Systemic governance failure",
+        "content": "The Co-Pilot's Monitoring review upgrades the assessment from 'governance gaps' to 'systemic governance failure.' The pattern is not individual decisions being delayed — it's the absence of a decision-making mechanism entirely.\n\nThe Co-Pilot notes: 'Six agents have now analyzed this project. Each has identified governance as the root issue. Continuing analysis will not produce new insights — it will only document the same finding with increasing precision.'"
+      },
+      {
+        "id": "08",
+        "title": "Knowledge Log",
+        "subtitle": "5 new entries",
+        "content": "5 new entries bring the running total to 34. New patterns: governance-execution-gap (the distance between what's planned and what's authorized), sponsor-disengagement (key decision-makers not engaging with analysis outputs), and stale-risk-register (risks growing without active management)."
+      }
     ]
   },
   {
@@ -92,11 +267,36 @@
     "gateColor": "red",
     "summary": "All 4 critical defects are governance gaps. 3/8 truths FAILED.",
     "documents": [
-      { "id": "01", "title": "Quality Report", "subtitle": "Grade F — 62.9% score" },
-      { "id": "02", "title": "Defect Register", "subtitle": "4 critical, all governance" },
-      { "id": "03", "title": "Truth Validation", "subtitle": "3/8 truths failed" },
-      { "id": "04", "title": "Co-Pilot Analysis", "subtitle": "Root cause: decision debt" },
-      { "id": "05", "title": "Knowledge Log", "subtitle": "3 new entries" }
+      {
+        "id": "01",
+        "title": "Quality Report",
+        "subtitle": "Grade F — 62.9% score",
+        "content": "The Quality Report applies an 8-dimension scoring model: Scope Definition (72%), Schedule Realism (58%), Budget Adequacy (45%), Risk Management (55%), Governance Readiness (30%), Stakeholder Alignment (52%), Technical Feasibility (78%), and Resource Availability (45%). Weighted composite: 62.9% — Grade F.\n\nThe two lowest-scoring dimensions (Governance Readiness at 30% and Budget Adequacy at 45%) are both entirely within leadership's control to resolve. Technical Feasibility scores highest at 78%, confirming the project's challenges are organizational."
+      },
+      {
+        "id": "02",
+        "title": "Defect Register",
+        "subtitle": "4 critical, all governance",
+        "content": "Four critical defects identified: DEF-001 (No PM assigned — blocks execution), DEF-002 (Budget unconfirmed — $700K gap unresolved), DEF-003 (Scope undecided — two parallel plans maintained), DEF-004 (Charter unsigned — no formal authority).\n\nAll four defects map directly to the four governance decisions. There are no critical technical defects. The project's analysis quality is high — it's the organizational wrapper that fails."
+      },
+      {
+        "id": "03",
+        "title": "Truth Validation",
+        "subtitle": "3/8 truths failed",
+        "content": "Eight 'project truths' were tested against evidence. Results: 5 PASSED, 3 FAILED.\n\nFailed truths: (1) 'This project has executive sponsorship' — FALSE, no signed charter or active sponsor engagement. (2) 'The budget is sufficient for the defined scope' — FALSE, minimum $100K gap even at reduced scope. (3) 'The project has adequate governance mechanisms' — FALSE, no PM, no steering committee, no change control board.\n\nPassed truths include technical feasibility, requirements completeness, and risk identification thoroughness."
+      },
+      {
+        "id": "04",
+        "title": "Co-Pilot Analysis",
+        "subtitle": "Root cause: decision debt",
+        "content": "The Co-Pilot's validation review synthesizes findings across all 5 preceding agents into a single root cause statement: 'Decision debt is the dominant failure mode. Every quality dimension that scores below 60% traces back to an unmade governance decision. The project does not need more analysis — it needs 4 decisions.'\n\nThe Co-Pilot rates the probability of project success without governance resolution at <10%, and with resolution at >70%."
+      },
+      {
+        "id": "05",
+        "title": "Knowledge Log",
+        "subtitle": "3 new entries",
+        "content": "3 final validation entries bring the running total to 37. New pattern: 'analysis-without-authority' — the phenomenon where detailed planning proceeds without the organizational authority to act on it, creating an illusion of progress while the real blockers remain unaddressed."
+      }
     ]
   },
   {
@@ -109,11 +309,36 @@
     "gateColor": "navy",
     "summary": "36 prevention rules. 39 KB entries. 'This project needs 4 decisions, not more analysis.'",
     "documents": [
-      { "id": "01", "title": "Lessons Learned", "subtitle": "36 prevention rules extracted" },
-      { "id": "02", "title": "Knowledge Base", "subtitle": "39 entries across 7 clusters" },
-      { "id": "03", "title": "Handoff Package", "subtitle": "Executive summary + actions" },
-      { "id": "04", "title": "Co-Pilot Analysis", "subtitle": "Final recommendations" },
-      { "id": "05", "title": "Knowledge Log", "subtitle": "2 final entries" }
+      {
+        "id": "01",
+        "title": "Lessons Learned",
+        "subtitle": "36 prevention rules extracted",
+        "content": "36 prevention rules were distilled from the full analysis cycle. Each rule follows the format: IF [detection signal] THEN [prevention action]. Rules are organized by cluster, with the Decision/Governance cluster contributing the most rules (11).\n\nTop 3 prevention rules by impact: (1) IF no PM is assigned before planning begins THEN halt planning and escalate hiring as a prerequisite. (2) IF budget gap exceeds 20% THEN require scope-budget reconciliation before detailed planning. (3) IF project charter is unsigned after 2 weeks THEN escalate to board level as a go/no-go gate."
+      },
+      {
+        "id": "02",
+        "title": "Knowledge Base",
+        "subtitle": "39 entries across 7 clusters",
+        "content": "The complete Knowledge Base contains 39 entries organized across 7 clusters. Cluster distribution: Decision/Governance (11 entries — DOMINANT), Inadequate Preparation (7), Stakeholder/Org (6), Vendor/Technical (5), Budget/Resource (5), Optimism/Self-Assessment (3), Timeline/Schedule (2).\n\nThe Knowledge Base is designed to be portable — future projects can query it for pattern matches against their own characteristics, enabling early detection of similar failure modes."
+      },
+      {
+        "id": "03",
+        "title": "Handoff Package",
+        "subtitle": "Executive summary + actions",
+        "content": "The Handoff Package is a single-page executive summary designed for the CFO and steering committee. It contains: (1) Overall verdict: FAIL — Grade F (62.9%), (2) Root cause: 4 unmade governance decisions, (3) Required actions with owners and deadlines, (4) Cost of inaction: ~$50K/week.\n\nThe package deliberately avoids technical detail, focusing entirely on the decisions leadership must make. Its closing statement: 'This project needs 4 decisions, not more analysis.'"
+      },
+      {
+        "id": "04",
+        "title": "Co-Pilot Analysis",
+        "subtitle": "Final recommendations",
+        "content": "The Co-Pilot's final analysis provides three forward-looking recommendations: (1) Schedule a 'Decision Sprint' — a single 3-hour steering committee session to resolve all 4 governance items. (2) Hire an interim PM within 2 weeks, even if permanent hire takes longer. (3) Re-run the PM Agent Chain after decisions are made — the analysis infrastructure is complete and a re-run would take <30 minutes to validate the updated context.\n\nThe Co-Pilot's confidence: with governance resolved, this project has a 72% probability of successful delivery. Without resolution, <10%."
+      },
+      {
+        "id": "05",
+        "title": "Knowledge Log",
+        "subtitle": "2 final entries",
+        "content": "2 final entries close the Knowledge Log at 39 total entries. The closing entries document meta-patterns: (1) 'analysis-closure' — the point at which further analysis produces diminishing returns, and (2) 'decision-readiness' — the state where all information needed for decisions has been produced but the decisions themselves remain unmade."
+      }
     ]
   }
 ]
