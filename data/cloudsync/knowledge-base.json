@@ -538,5 +538,50 @@
     "detectionSignal": "Gate review milestones have zero-duration tasks; no decision buffer between phases",
     "prevention": "IF schedule has gate reviews THEN add minimum 1-week decision buffer after each gate",
     "relatedEntries": ["KB-002", "KB-030"]
+  },
+  {
+    "id": "KB-037",
+    "cluster": "Quality & Validation",
+    "title": "All Critical Defects Are Governance Gaps",
+    "severity": "critical",
+    "pattern": "governance-execution-gap",
+    "insight": "4 critical defects identified in validation — all 4 map directly to unmade governance decisions. Zero critical technical defects exist. The project's analysis quality is high; it's the organizational wrapper that fails.",
+    "source": "Agent 5 — Validation",
+    "agentId": 5,
+    "tags": ["quality", "defects", "governance"],
+    "actionable": true,
+    "detectionSignal": "All critical defects trace to governance decisions rather than technical issues",
+    "prevention": "IF all critical defects are governance-related THEN escalate governance resolution as the sole priority before further analysis",
+    "relatedEntries": ["KB-002", "KB-005"]
+  },
+  {
+    "id": "KB-038",
+    "cluster": "Quality & Validation",
+    "title": "Analysis-Without-Authority Anti-Pattern",
+    "severity": "high",
+    "pattern": "governance-execution-gap",
+    "insight": "Detailed planning proceeded without organizational authority to act on it. Six agents analyzed the same root cause with increasing precision — but no analysis can substitute for the 4 decisions leadership must make.",
+    "source": "Agent 5 — Validation",
+    "agentId": 5,
+    "tags": ["governance", "analysis", "anti-pattern"],
+    "actionable": true,
+    "detectionSignal": "Multiple analysis phases produce consistent findings but no action is taken; analysis depth increases while decision count stays at zero",
+    "prevention": "IF analysis has identified the same root cause across 3+ phases THEN halt analysis and escalate to decision-makers with a clear action framework",
+    "relatedEntries": ["KB-006", "KB-002"]
+  },
+  {
+    "id": "KB-039",
+    "cluster": "Closing / Institutional",
+    "title": "Decision Sprint Recommended as Intervention",
+    "severity": "high",
+    "pattern": "decision-debt-accumulating",
+    "insight": "The most effective intervention is a single 'Decision Sprint' — a focused 3-hour steering committee session to resolve all 4 governance decisions simultaneously. Cost of continued indecision: ~$50K/week.",
+    "source": "Agent 6 — Closing",
+    "agentId": 6,
+    "tags": ["governance", "intervention", "recommendation"],
+    "actionable": true,
+    "detectionSignal": "Multiple interdependent decisions remain pending; each decision unblocks downstream decisions",
+    "prevention": "IF 3+ governance decisions are pending simultaneously THEN schedule a single decision session rather than addressing them sequentially",
+    "relatedEntries": ["KB-002", "KB-004", "KB-007"]
   }
 ]

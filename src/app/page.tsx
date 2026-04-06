@@ -4,10 +4,10 @@ import { StatusBadge, VerdictBadge } from "@/components/StatusBadge";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Projects — Combo D Dashboard",
+  title: "PM Agent Chain Dashboard",
   description: "PM Agent Chain analysis results dashboard",
   openGraph: {
-    title: "Combo D — PM Agent Chain Dashboard",
+    title: "PM Agent Chain Dashboard",
     description: "Client-facing viewer for PM Agent Chain results",
   },
 };

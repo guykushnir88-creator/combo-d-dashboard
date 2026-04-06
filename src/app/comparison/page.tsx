@@ -5,6 +5,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Project Comparison",
   description: "Side-by-side comparison of PM Agent Chain analysis results",
+  openGraph: {
+    title: "Project Comparison — PM Agent Chain",
+    description: "Same chain, different projects, different outcomes",
+  },
 };
 
 interface Project {

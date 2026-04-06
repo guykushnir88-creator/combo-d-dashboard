@@ -13,10 +13,10 @@ export async function generateMetadata({ params }: PageProps) {
   const project = await getProject(id);
   if (!project) return { title: "Not Found" };
   return {
-    title: `${project.name} — Combo D`,
+    title: project.name,
     description: `PM Agent Chain results for ${project.name}. Verdict: ${project.verdict}`,
     openGraph: {
-      title: `${project.name} ��� PM Agent Chain`,
+      title: `${project.name} — PM Agent Chain`,
       description: `${project.verdict} — ${project.docsProduced} documents, ${project.kbEntries} KB entries`,
     },
   };

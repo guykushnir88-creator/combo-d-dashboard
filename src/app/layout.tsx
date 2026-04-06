@@ -4,8 +4,8 @@ import { Sidebar } from "@/components/Sidebar";
 
 export const metadata: Metadata = {
   title: {
-    default: "Combo D — PM Agent Chain Dashboard",
-    template: "%s — Combo D",
+    default: "PM Agent Chain Dashboard",
+    template: "%s — PM Agent Chain",
   },
   description: "Client-facing viewer for PM Agent Chain results",
   openGraph: {
