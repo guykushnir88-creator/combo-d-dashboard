@@ -18,6 +18,7 @@ const verdictColorMap: Record<string, string> = {
   PASS: "bg-green/10 text-green border-green/20",
   "NO-GO": "bg-red/10 text-red border-red/20",
   PARTIAL: "bg-amber/10 text-amber border-amber/20",
+  "CONDITIONAL GO": "bg-green/10 text-green border-green/20",
 };
 
 export function GateBadge({ gate, color }: { gate: string; color: string }) {

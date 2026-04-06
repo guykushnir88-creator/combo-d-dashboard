@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "id": "GOV-001",
+    "title": "Stan Bryant Dashboard Preview",
+    "status": "PENDING",
+    "owner": "Stan Bryant (PMO Lead)",
+    "deadline": "2026-04-11",
+    "impact": "Cannot present to enterprise prospects without stakeholder sign-off",
+    "relatedDefects": [],
+    "relatedKB": ["KB-012", "KB-029"],
+    "evidence": null,
+    "lastUpdated": null
+  },
+  {
+    "id": "GOV-002",
+    "title": "Demo Script for Enterprise Prospects",
+    "status": "PENDING",
+    "owner": "Stan Bryant (PMO Lead)",
+    "deadline": "2026-04-18",
+    "impact": "First enterprise demo requires a rehearsed walkthrough script",
+    "relatedDefects": [],
+    "relatedKB": ["KB-027"],
+    "evidence": null,
+    "lastUpdated": null
+  },
+  {
+    "id": "GOV-003",
+    "title": "Physical iPad Test Confirms Mobile Experience",
+    "status": "PENDING",
+    "owner": "Development Team",
+    "deadline": "2026-04-12",
+    "impact": "Browser DevTools simulation may miss touch/scroll issues on real device",
+    "relatedDefects": [],
+    "relatedKB": ["KB-008", "KB-025"],
+    "evidence": null,
+    "lastUpdated": null
+  }
+]

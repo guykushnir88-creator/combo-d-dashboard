@@ -20,17 +20,17 @@
     "id": "combo-d",
     "name": "Combo D Dashboard",
     "client": "Internal",
-    "status": "in-progress",
-    "lastRun": "2026-04-05",
+    "status": "analysis-complete",
+    "lastRun": "2026-04-06",
     "agents": {
-      "completed": 1,
+      "completed": 4,
       "total": 6
     },
-    "verdict": "PASS WITH CONDITIONS",
+    "verdict": "CONDITIONAL GO",
     "verdictGrade": null,
     "verdictScore": null,
-    "kbEntries": 12,
-    "docsProduced": 8,
-    "runTime": "13 min"
+    "kbEntries": 29,
+    "docsProduced": 37,
+    "runTime": "33 min"
   }
 ]
