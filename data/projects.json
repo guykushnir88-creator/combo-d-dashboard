@@ -23,14 +23,14 @@
     "status": "analysis-complete",
     "lastRun": "2026-04-06",
     "agents": {
-      "completed": 4,
+      "completed": 6,
       "total": 6
     },
-    "verdict": "CONDITIONAL GO",
-    "verdictGrade": null,
-    "verdictScore": null,
-    "kbEntries": 29,
-    "docsProduced": 37,
-    "runTime": "33 min"
+    "verdict": "PASS",
+    "verdictGrade": "B",
+    "verdictScore": 89.5,
+    "kbEntries": 35,
+    "docsProduced": 54,
+    "runTime": "48 min"
   }
 ]

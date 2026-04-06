@@ -49,6 +49,15 @@ export async function getGovernance(projectId: string) {
   }
 }
 
+export async function getComparison() {
+  try {
+    const raw = await fs.readFile(path.join(dataDir, "comparison.json"), "utf-8");
+    return JSON.parse(raw);
+  } catch {
+    return null;
+  }
+}
+
 export async function getAssessment(projectId: string) {
   try {
     const raw = await fs.readFile(

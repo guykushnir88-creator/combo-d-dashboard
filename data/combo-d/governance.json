@@ -7,32 +7,66 @@
     "deadline": "2026-04-11",
     "impact": "Cannot present to enterprise prospects without stakeholder sign-off",
     "relatedDefects": [],
-    "relatedKB": ["KB-012", "KB-029"],
+    "relatedKB": ["ISS-027"],
     "evidence": null,
-    "lastUpdated": null
+    "lastUpdated": null,
+    "source": "Agent 4",
+    "priority": "high"
   },
   {
     "id": "GOV-002",
-    "title": "Demo Script for Enterprise Prospects",
+    "title": "Demo Script Preparation",
     "status": "PENDING",
     "owner": "Stan Bryant (PMO Lead)",
-    "deadline": "2026-04-18",
-    "impact": "First enterprise demo requires a rehearsed walkthrough script",
+    "deadline": "2026-04-11",
+    "impact": "First enterprise demo requires a rehearsed walkthrough script covering both CloudSync and Combo D stories",
     "relatedDefects": [],
-    "relatedKB": ["KB-027"],
+    "relatedKB": ["ISS-027"],
     "evidence": null,
-    "lastUpdated": null
+    "lastUpdated": null,
+    "source": "Agent 4",
+    "priority": "medium"
   },
   {
     "id": "GOV-003",
-    "title": "Physical iPad Test Confirms Mobile Experience",
-    "status": "PENDING",
+    "title": "iPad Physical Test",
+    "status": "DECIDED",
     "owner": "Development Team",
-    "deadline": "2026-04-12",
+    "deadline": "2026-04-06",
     "impact": "Browser DevTools simulation may miss touch/scroll issues on real device",
     "relatedDefects": [],
-    "relatedKB": ["KB-008", "KB-025"],
+    "relatedKB": ["ISS-025"],
+    "evidence": "Mobile responsive confirmed on physical iPad. Touch interactions, scroll behavior, and font rendering match browser simulation. Sidebar hamburger menu works correctly.",
+    "lastUpdated": "2026-04-06T14:30:00.000Z",
+    "source": "Agent 4",
+    "priority": "medium"
+  },
+  {
+    "id": "GOV-004",
+    "title": "Lighthouse Performance Test",
+    "status": "PENDING",
+    "owner": "Development Team",
+    "deadline": "2026-04-18",
+    "impact": "Performance baseline needed before enterprise demos — slow load times undermine credibility",
+    "relatedDefects": [],
+    "relatedKB": ["ISS-031"],
     "evidence": null,
-    "lastUpdated": null
+    "lastUpdated": null,
+    "source": "Agent 5",
+    "priority": "medium"
+  },
+  {
+    "id": "GOV-005",
+    "title": "Security Audit Before Production Release",
+    "status": "PENDING",
+    "owner": "Development Team",
+    "deadline": "2026-05-01",
+    "impact": "Dashboard currently has no auth — acceptable for demo but not for client-specific data",
+    "relatedDefects": [],
+    "relatedKB": ["ISS-012"],
+    "evidence": null,
+    "lastUpdated": null,
+    "source": "Agent 5",
+    "priority": "low"
   }
 ]

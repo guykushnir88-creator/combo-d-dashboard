@@ -7,55 +7,55 @@
     "docsProduced": 8,
     "gate": "PASS WITH CONDITIONS",
     "gateColor": "green",
-    "summary": "Dashboard requirements extracted. 14 user stories defined. Low complexity (15/50). Internal project — no budget constraints. Condition: confirm demo audience expectations with Stan.",
+    "summary": "Extracted 21 requirements from brief. Caught optimism bias. Flagged missing budget and PM assignment. Complexity 40/50. Budget gap 45%. 15 risks identified.",
     "documents": [
       {
         "id": "01",
         "title": "Context Analysis",
         "subtitle": "Internal tool, low risk profile",
-        "content": "The Combo D Dashboard is an internal tool for visualizing PM Agent Chain outputs. As a client-facing viewer, it has minimal compliance requirements and no external stakeholder complexity.\n\nThe project brief is well-defined: 3 screens in Sprint 1, enhanced panels in Sprint 2, and polish in Sprint 3. The development approach (Next.js, Tailwind, JSON data) is pre-selected and appropriate for the scope."
+        "content": "The Combo D Dashboard is an internal tool for visualizing PM Agent Chain outputs. As a client-facing viewer, it has minimal compliance requirements and no external stakeholder complexity.\n\nThe project brief is well-defined: 3 screens in Sprint 1, enhanced panels in Sprint 2, and polish in Sprint 3. The development approach (Next.js, Tailwind, JSON data) is pre-selected and appropriate for the scope.\n\nComplexity score: 40/50 — high for an internal tool, driven by the breadth of features across 3 sprints and the design system matching requirement."
       },
       {
         "id": "02",
         "title": "Project Charter",
         "subtitle": "Internal, self-sponsored",
-        "content": "The project is self-sponsored with no formal budget ceiling. Success criteria: functional dashboard deployed to Vercel, capable of displaying PM Agent Chain results for any project.\n\nTimeline: 3 sprints over 1 week. No external dependencies. Single developer with full authority to make technical decisions."
+        "content": "The project is self-sponsored with no formal budget ceiling. Success criteria: functional dashboard deployed to Vercel, capable of displaying PM Agent Chain results for any project.\n\nTimeline: 3 sprints over 2-3 days. No external dependencies. Single developer with full authority to make technical decisions. Charter effectively auto-approved due to internal nature."
       },
       {
         "id": "03",
         "title": "Statement of Work",
-        "subtitle": "8 deliverables across 3 sprints",
-        "content": "Sprint 1: Project selector, project overview, context setup. Sprint 2: Document viewer, KB explorer, governance tracker. Sprint 3: Assessment viewer, pipeline polish, multi-project support, deployment."
+        "subtitle": "21 requirements across 3 sprints",
+        "content": "Sprint 1: Project selector, project overview, context setup (7 requirements). Sprint 2: Document viewer, KB explorer, governance tracker (8 requirements). Sprint 3: Assessment viewer, pipeline polish, multi-project, comparison view (6 requirements).\n\n21 total requirements, all Must-Have for the MVP."
       },
       {
         "id": "04",
         "title": "Business Case",
-        "subtitle": "Internal efficiency tool",
-        "content": "The dashboard eliminates the need for PMO leaders to access Claude Code directly. It provides a read-only, client-safe view of chain results that can be shared in executive briefings."
+        "subtitle": "Internal efficiency + demo tool",
+        "content": "The dashboard serves dual purpose: (1) eliminates the need for PMO leaders to access Claude Code directly, and (2) provides a demo-ready artifact for enterprise prospect meetings.\n\nROI is measured in demo effectiveness, not cost savings. A compelling dashboard demo could directly influence enterprise deal closure."
       },
       {
         "id": "05",
         "title": "Requirements Catalog",
-        "subtitle": "14 user stories, all Must-Have",
-        "content": "All 14 requirements are Must-Have for the MVP. No Could-Have or Won't-Have items — the scope is intentionally minimal and well-bounded."
+        "subtitle": "21 user stories, MoSCoW classified",
+        "content": "All 21 requirements classified as Must-Have for the MVP. Requirements cover: navigation (3), data display (8), interactivity (5), visualization (3), deployment (2). No Could-Have or Won't-Have items — scope is intentionally minimal and well-bounded."
       },
       {
         "id": "06",
         "title": "Stakeholder Register",
         "subtitle": "2 stakeholders, aligned",
-        "content": "Primary stakeholder: Stan (PMO lead, demo audience). Secondary: development team (internal). Full alignment on scope and approach."
+        "content": "Primary stakeholder: Stan Bryant (PMO lead, demo audience, decision-maker). Secondary: development team (internal). Full alignment on scope and approach.\n\nKey risk: Stan has not yet seen the dashboard. Stakeholder readiness gap flagged — product may outpace stakeholder expectations."
       },
       {
         "id": "07",
         "title": "Co-Pilot Analysis",
-        "subtitle": "1 bias detected, 2 blind spots",
-        "content": "Low-complexity internal project with clear scope. One bias detected: estimation optimism — sprint scope ambitious for single developer. Blind spots: no iPad physical testing plan, no demo script for stakeholder walkthrough."
+        "subtitle": "Optimism bias detected, 2 blind spots",
+        "content": "Optimism bias detected: sprint scope is ambitious for single developer, even with AI assistance. The brief assumes all 21 requirements can be delivered in 3 sprints without trade-offs.\n\nBlind spots: (1) no iPad physical testing plan, (2) no demo script for stakeholder walkthrough. Both are critical for the demo use case but absent from the project brief."
       },
       {
         "id": "08",
         "title": "Knowledge Log",
         "subtitle": "12 entries, 4 clusters",
-        "content": "12 knowledge entries captured during initiation. Primary clusters: Technical Architecture (5), UI/UX Patterns (3), Data Structure (2), Deployment (2). All entries are informational — no critical findings."
+        "content": "12 knowledge entries captured during initiation. Clusters: Technical Architecture (5), UI/UX Patterns (3), Data Structure (2), Deployment (2). All entries are informational — no critical findings at this stage.\n\nEarly signal: estimation approach will need to account for AI-assisted development velocity, which has no established baseline."
       }
     ]
   },
@@ -67,67 +67,67 @@
     "docsProduced": 10,
     "gate": "PASS WITH CONDITIONS",
     "gateColor": "green",
-    "summary": "3-sprint WBS with 22 tasks. Bottom-up estimate: 18 dev hours. Schedule realistic for single developer. Condition: budget for iPad testing device if not available.",
+    "summary": "Estimated 55.6h across 4 days. Recommended Scenario B (reduced scope). Utilization at 139%. Detected Planning Fallacy bias. $5,952 budget baseline.",
     "documents": [
       {
         "id": "01",
         "title": "Context Analysis",
-        "subtitle": "Sprint planning assumptions verified",
-        "content": "Verified assumptions from Initiation: Next.js scaffolding takes ~5 min, Tailwind v4 uses CSS-based config (no tailwind.config.js), Vercel CLI available for deploy. All assumptions held."
+        "subtitle": "Planning assumptions verified",
+        "content": "Verified assumptions from Initiation: Next.js scaffolding takes ~5 min, Tailwind v4 uses CSS-based config, Vercel CLI available for deploy. All assumptions held.\n\nNew finding: the estimation paradigm for AI-assisted development is fundamentally different from traditional software estimation. Traditional models predict 55.6 hours; actual delivery may be 5-10x faster."
       },
       {
         "id": "02",
         "title": "WBS",
         "subtitle": "22 tasks across 3 sprints",
-        "content": "Sprint 1 (8 tasks): scaffold, design system, data layer, sidebar, project selector, project overview, context setup, deploy. Sprint 2 (8 tasks): document viewer, KB explorer, governance tracker, data enrichment, mobile pass, testing. Sprint 3 (6 tasks): assessment viewer, radar chart, pipeline polish, multi-project, final polish, production deploy."
+        "content": "Sprint 1 (8 tasks): scaffold, design system, data layer, sidebar, project selector, project overview, context setup, deploy. Sprint 2 (8 tasks): document viewer, KB explorer, governance tracker, data enrichment, mobile pass, testing. Sprint 3 (6 tasks): assessment viewer, radar chart, pipeline polish, multi-project, comparison, production deploy.\n\n100% requirement traceability — every task maps to at least one of the 21 requirements."
       },
       {
         "id": "03",
         "title": "Project Schedule",
-        "subtitle": "3 sprints, ~18 dev hours total",
-        "content": "Sprint 1: 6 hours. Sprint 2: 7 hours. Sprint 3: 5 hours. Total: ~18 hours across 2-3 days. Critical path: data structure decisions in Sprint 1 gate all subsequent work."
+        "subtitle": "Scenario A (55.6h) vs Scenario B (reduced)",
+        "content": "Scenario A: Full scope, 55.6 hours estimated across 4 working days. Utilization at 139% — unsustainable for sustained effort. Scenario B: Reduced scope (defer comparison view), 42 hours, utilization at 105%.\n\nRecommendation: Scenario B with comparison view added only if Sprint 3 completes ahead of schedule. The Planning Fallacy bias is strongest in Scenario A."
       },
       {
         "id": "04",
         "title": "Budget",
-        "subtitle": "$0 — internal project, no costs",
-        "content": "Zero external costs. Vercel free tier sufficient. No vendor licensing. Developer time is the only resource. Claude Code usage covered by existing subscription."
+        "subtitle": "$5,952 baseline (developer time only)",
+        "content": "Budget is developer time only, calculated at $107/hour equivalent rate. No vendor costs, no infrastructure costs (Vercel free tier). The budget is theoretical — as an internal project, it's tracked for PM methodology demonstration, not financial control.\n\n$5,952 represents the Scenario A estimate. Actual cost will depend on AI-assisted velocity multiplier."
       },
       {
         "id": "05",
         "title": "Risk Register",
-        "subtitle": "5 risks, all low-medium",
-        "content": "R1: Scope creep from feature ideas (MEDIUM). R2: Tailwind v4 breaking changes (LOW). R3: Mobile responsive gaps discovered late (MEDIUM). R4: Data structure doesn't scale to real chain output (LOW). R5: Demo audience expectations misaligned (LOW)."
+        "subtitle": "15 risks identified, 5 medium, 10 low",
+        "content": "Top 5 risks: R1 Scope creep from feature ideas (MEDIUM). R2 AI tool context limits (MEDIUM). R3 Mobile responsive gaps (MEDIUM). R4 Estimation paradigm mismatch (MEDIUM). R5 Stakeholder expectations misaligned (MEDIUM).\n\nNo HIGH or CRITICAL risks — internal project with single decision-maker and no external dependencies."
       },
       {
         "id": "06",
         "title": "Sprint Plan",
-        "subtitle": "3 sprints with clear deliverables",
-        "content": "Each sprint has entry criteria (previous sprint deployed), exit criteria (build passes, deployed to Vercel), and a demo checkpoint. Sprint boundaries are hard — no feature carryover."
+        "subtitle": "3 sprints with hard boundaries",
+        "content": "Each sprint has entry criteria (previous sprint deployed), exit criteria (build passes, deployed to Vercel), and a demo checkpoint. Sprint boundaries are hard — no feature carryover.\n\nKey discipline: feature ideas during sprints go to backlog, not into current sprint. This is the primary mitigation for scope creep risk."
       },
       {
         "id": "07",
         "title": "Communication Plan",
         "subtitle": "Git commits as progress reports",
-        "content": "Progress tracked via git commits. Each sprint ends with a deployment and summary. Stan receives the Vercel URL after Sprint 3 for review."
+        "content": "Progress tracked via git commits and Vercel deployments. Each sprint ends with a deployment and summary. Stan receives the Vercel URL after Sprint 3 for review.\n\nNo daily standups (single developer). No status reports (internal project). Communication is artifact-based: if it's not committed and deployed, it doesn't exist."
       },
       {
         "id": "08",
         "title": "Estimation Paradigm Note",
         "subtitle": "AI-assisted dev changes estimation rules",
-        "content": "Traditional estimation models don't apply to AI-assisted development. Tasks that would take 4-8 hours manually complete in 20-40 minutes with Claude Code. The WBS reflects AI-assisted estimates, not traditional ones. This creates a new pattern: estimation-paradigm-mismatch."
+        "content": "Traditional estimation models don't apply to AI-assisted development. Tasks that would take 4-8 hours manually complete in 20-40 minutes with Claude Code. The WBS reflects traditional estimates as a baseline; actual delivery will use AI-adjusted multipliers.\n\nThis creates the dominant knowledge pattern for this project: estimation-paradigm-mismatch. The chain will track how traditional PM metrics behave when development velocity is 10-100x faster than expected."
       },
       {
         "id": "09",
         "title": "Co-Pilot Analysis",
-        "subtitle": "Estimation paradigm flagged",
-        "content": "The Co-Pilot flags that WBS estimates assume consistent AI-assisted velocity. If the AI tool hits context limits or generates errors, tasks could take 3-5x longer. No contingency for AI-tool failure mode."
+        "subtitle": "Planning Fallacy detected",
+        "content": "The Co-Pilot detects Planning Fallacy: the estimate of 55.6 hours assumes each task takes its median expected time. No buffer for integration issues, debugging, or rework. Utilization at 139% is a classic planning fallacy indicator.\n\nCounterpoint: AI-assisted development may make the fallacy irrelevant if actual velocity is 5-10x faster. But this is itself an optimistic assumption about AI tool reliability."
       },
       {
         "id": "10",
         "title": "Knowledge Log",
         "subtitle": "6 new entries",
-        "content": "6 new entries bring total to 18. New dominant cluster: Estimation Paradigm (3 entries). Key insight: AI-assisted development creates a bimodal velocity distribution — either very fast or debugging-slow, with little middle ground."
+        "content": "6 new entries bring total to 18. New dominant cluster: Estimation Paradigm (3 entries). Key insight: AI-assisted development creates a bimodal velocity distribution — either very fast or debugging-slow, with little middle ground.\n\nThe Planning agent's most important output is not the schedule — it's the identification of estimation-paradigm-mismatch as a pattern that will recur across all AI-assisted projects."
       }
     ]
   },
@@ -139,67 +139,67 @@
     "docsProduced": 10,
     "gate": "PASS",
     "gateColor": "green",
-    "summary": "All 3 sprints executed successfully. 22/22 tasks complete. Zero blockers. Velocity exceeded estimates by 40%. Dogfooding revealed 2 UX improvements.",
+    "summary": "ALL 4 sprints completed in 25 minutes. 132x velocity multiplier. Created custom tag estimation-paradigm-mismatch. 20/21 requirements delivered. Zero blockers.",
     "documents": [
       {
         "id": "01",
         "title": "Sprint 1 Report",
-        "subtitle": "Complete — 6 hours, all tasks done",
-        "content": "Sprint 1 delivered: project scaffold, design system, data layer, sidebar, project selector page, project overview page, context setup page, initial Vercel deployment. All exit criteria met."
+        "subtitle": "Complete — all tasks done",
+        "content": "Sprint 1 delivered: project scaffold, design system, data layer, sidebar, project selector page, project overview page, context setup page, initial Vercel deployment. All 7 exit criteria met.\n\nNotable: entire Sprint 1 completed in a single Claude Code session. The AI-assisted approach eliminated the typical context-switching overhead of multi-day sprints."
       },
       {
         "id": "02",
         "title": "Sprint 2 Report",
-        "subtitle": "Complete — 5.5 hours, all tasks done",
-        "content": "Sprint 2 delivered: enhanced document viewer with content, KB explorer with sortable table and prevention playbook, governance tracker with inline editing. Came in under estimate (5.5 vs 7 hours)."
+        "subtitle": "Complete — all tasks done",
+        "content": "Sprint 2 delivered: enhanced document viewer with inline content, KB explorer with sortable table and prevention playbook, governance tracker with inline editing. All 8 exit criteria met.\n\nThe document viewer required the most complex component (ProjectTabs.tsx at ~600 lines). AI-assisted development handled this without the typical 'large component' slowdown."
       },
       {
         "id": "03",
         "title": "Sprint 3 Report",
-        "subtitle": "Complete — 4 hours, all tasks done",
-        "content": "Sprint 3 delivered: SVG radar chart, assessment viewer, pipeline with connectors, multi-project support, breadcrumbs, meta tags, favicon, mobile responsive pass. Under estimate (4 vs 5 hours)."
+        "subtitle": "Complete — all tasks done",
+        "content": "Sprint 3 delivered: SVG radar chart, assessment viewer, pipeline with connectors, multi-project support (Combo D as second project), breadcrumbs, meta tags, favicon, mobile responsive pass. All 6 exit criteria met."
       },
       {
         "id": "04",
-        "title": "Velocity Analysis",
-        "subtitle": "40% faster than estimated",
-        "content": "Actual total: ~15.5 hours vs 18 hours estimated. AI-assisted development velocity was consistent across sprints. No significant debugging delays. The estimation-paradigm-mismatch pattern confirmed: AI estimates should use 0.7x multiplier for well-scoped tasks."
+        "title": "Sprint 4 Report",
+        "subtitle": "Added — data update + comparison",
+        "content": "Sprint 4 (unplanned): Complete Combo D dogfooding data load, comparison page, mobile header fix. This sprint emerged from the dogfooding process — using the dashboard to view its own results revealed the need for complete data.\n\nThe existence of Sprint 4 is itself a finding: AI-assisted projects complete scope so fast that additional scope can be absorbed without schedule impact."
       },
       {
         "id": "05",
-        "title": "Dogfooding Findings",
-        "subtitle": "2 UX issues discovered",
-        "content": "Issue 1: Mobile hamburger menu overlaps page title at 375px — needs left padding on main content. Issue 2: Combo D project card still shows stale data from initial scaffold — needs update to reflect actual completed sprints."
+        "title": "Velocity Analysis",
+        "subtitle": "132x multiplier — 25 min vs 55.6h estimate",
+        "content": "Traditional estimate: 55.6 hours (3,336 minutes). Actual delivery: ~25 minutes of AI-assisted development time (excluding data authoring and review). Velocity multiplier: 132x.\n\nThis number is extraordinary and should be treated with caution. It reflects a best-case scenario: well-defined scope, single developer with full authority, no external dependencies, and an AI tool operating at peak performance. The 132x is an N=1 data point, not a generalizable benchmark."
       },
       {
         "id": "06",
         "title": "Change Requests",
-        "subtitle": "0 CRs — scope held",
-        "content": "Zero change requests during execution. Scope discipline maintained across all 3 sprints. Feature ideas (auth, database, real-time updates) captured in backlog but not allowed to interrupt sprints."
+        "subtitle": "0 formal CRs — scope held",
+        "content": "Zero formal change requests during execution. Sprint 4 was added as a bonus sprint, not a scope change. Feature ideas (auth, database, real-time updates) captured in backlog but not allowed to interrupt sprints.\n\nScope discipline was the single most important factor in on-time delivery."
       },
       {
         "id": "07",
         "title": "Blocker Register",
-        "subtitle": "0 blockers",
-        "content": "No execution blockers encountered. The closest issue was a TypeScript type mismatch between Agent data (nullable runTime) and component props, resolved in <2 minutes."
+        "subtitle": "0 blockers across all sprints",
+        "content": "No execution blockers encountered. The closest issues were: (1) TypeScript type mismatch for nullable runTime (resolved in 2 minutes), (2) Tailwind v4 CSS @theme syntax (resolved by reading docs). Neither qualified as a blocker.\n\nThe absence of blockers is partly attributable to the AI tool's ability to generate correct code on first attempt for most tasks."
       },
       {
         "id": "08",
-        "title": "Resource Utilization",
-        "subtitle": "Single developer, AI-augmented",
-        "content": "One developer with Claude Code. No additional resources needed. AI tool handled scaffolding, component generation, data file creation, and deployment. Developer focused on architecture decisions and quality review."
+        "title": "Custom Tag: estimation-paradigm-mismatch",
+        "subtitle": "New pattern for PM vocabulary",
+        "content": "The Execution agent created a custom knowledge tag: estimation-paradigm-mismatch. This tag captures the fundamental disconnect between traditional PM estimation methods and AI-assisted development reality.\n\nThe tag applies to any project where the development tooling changes the velocity baseline by more than 5x. Traditional estimation, earned value, and resource planning frameworks all produce misleading results at this velocity differential."
       },
       {
         "id": "09",
         "title": "Co-Pilot Analysis",
-        "subtitle": "Clean execution, no concerns",
-        "content": "Execution was clean. The Co-Pilot notes that the project benefited from clear scope, single decision-maker, and no external dependencies — conditions that are atypical for enterprise projects."
+        "subtitle": "Clean execution, velocity warning",
+        "content": "Execution was clean — no concerns about quality, scope, or process. However, the Co-Pilot warns: 'The 132x velocity multiplier is from a single project with optimal conditions. Do not extrapolate this to enterprise projects with multiple stakeholders, compliance requirements, or legacy system dependencies.'\n\nThe Co-Pilot recommends treating 132x as a ceiling, not a baseline."
       },
       {
         "id": "10",
         "title": "Knowledge Log",
-        "subtitle": "5 new entries",
-        "content": "5 new entries bring total to 23. Key new patterns: ai-velocity-multiplier (AI dev is ~1.4x faster than estimated), scope-discipline-holds (zero CRs when sprints are short and well-bounded), dogfooding-reveals-gaps (using your own product finds issues testing doesn't)."
+        "subtitle": "7 new entries",
+        "content": "7 new entries bring total to 25. Key new patterns: ai-velocity-multiplier (empirical 132x for this project), scope-discipline-holds (zero CRs when sprints are short and well-bounded), dogfooding-reveals-gaps (using your own product finds issues testing doesn't).\n\nThe Execution phase confirms: estimation-paradigm-mismatch is the dominant pattern for AI-assisted projects."
       }
     ]
   },
@@ -211,61 +211,61 @@
     "docsProduced": 9,
     "gate": "CONDITIONAL GO",
     "gateColor": "green",
-    "summary": "7/8 gate criteria PASS. Go-live confidence: 85%. 3 conditions for full approval. Primary gap: no physical iPad test yet.",
+    "summary": "CPI=141.7 (meaningless for AI projects). EVM framework gap identified. 13/15 risks closed (-88% exposure). Survivorship bias warning — 132x is N=1.",
     "documents": [
       {
         "id": "01",
         "title": "KPI Dashboard",
-        "subtitle": "7/8 criteria passing",
-        "content": "Passing: Scope Complete (YES), Schedule Met (YES), Budget Met (YES — $0), Quality Gate (YES — build passes), Deployment Live (YES), Mobile Responsive (YES — tested at 375px/768px/1440px), Multi-Project (YES).\n\nAt risk: Physical Device Test (NOT YET — tested via browser DevTools only)."
+        "subtitle": "13/15 indicators passing",
+        "content": "Passing: Scope Complete (YES — 20/21 requirements), Schedule Met (YES — ahead of schedule), Budget Met (YES — $0 external costs), Quality Gate (YES — TypeScript clean), Deployment Live (YES — Vercel), Mobile Responsive (YES), Multi-Project (YES), Documentation (YES), KB Population (YES — 25+ entries), Risk Closure (YES — 13/15 closed), Stakeholder Alignment (PARTIAL), Physical Device Test (YES), Build Stability (YES).\n\nAt risk: Stakeholder Review (NOT YET — Stan hasn't seen it), Demo Script (NOT YET — needs preparation)."
       },
       {
         "id": "02",
         "title": "Gate Assessment",
-        "subtitle": "CONDITIONAL GO recommendation",
-        "content": "The project meets all criteria for a conditional go-live. Three conditions must be met before presenting to enterprise prospects: (1) Stan Bryant reviews and approves the dashboard, (2) a demo script is prepared, (3) physical iPad test confirms the mobile experience matches browser simulation."
+        "subtitle": "CONDITIONAL GO",
+        "content": "CONDITIONAL GO recommendation. The dashboard is functionally complete, deployed, and tested. Three conditions for full approval: (1) Stan Bryant reviews and approves, (2) demo script is prepared for enterprise walkthrough, (3) Lighthouse performance baseline captured.\n\nThe conditions are all low-effort and can be resolved within one week."
       },
       {
         "id": "03",
         "title": "Risk Status",
-        "subtitle": "4/5 risks closed",
-        "content": "R1 Scope Creep: CLOSED — zero CRs. R2 Tailwind v4: CLOSED — no breaking changes. R3 Mobile Gaps: MITIGATED — responsive pass done, physical test pending. R4 Data Scale: CLOSED — JSON structure works for demo. R5 Demo Expectations: OPEN — awaiting Stan's review."
+        "subtitle": "13/15 risks closed, -88% exposure",
+        "content": "Risk closure rate: 86.7% (13/15). Remaining open: R5 Stakeholder expectations (awaiting Stan's review) and a new risk: R16 Survivorship bias in velocity claims.\n\nTotal risk exposure reduced by 88% from planning phase. This is an exceptional closure rate, driven by the project's internal nature and single-stakeholder structure."
       },
       {
         "id": "04",
         "title": "Earned Value Report",
-        "subtitle": "Under budget, ahead of schedule",
-        "content": "Planned Value: 18 hours. Earned Value: 18 hours (100% scope complete). Actual Cost: 15.5 hours. CPI: 1.16 (under budget). SPI: 1.0 (on schedule). The project delivered full scope 14% under estimated effort."
+        "subtitle": "CPI=141.7 — framework gap identified",
+        "content": "Planned Value: $5,952 (55.6h × $107/h). Earned Value: $5,952 (100% scope). Actual Cost: $42 (0.4h × $107/h). CPI: 141.7. SPI: 4.0+.\n\nThese numbers are technically correct but practically meaningless. A CPI of 141.7 doesn't mean the project was 141x more efficient — it means the EVM framework breaks when velocity multipliers exceed 10x. This is the ISS-026 finding: EVM produces meaningless results for AI-assisted projects."
       },
       {
         "id": "05",
-        "title": "Governance Report",
-        "subtitle": "3 conditional items",
-        "content": "Three governance items tracked: (1) Stan Bryant dashboard preview — deadline April 11. (2) Demo script for enterprise prospects — no hard deadline but needed before first demo. (3) Physical iPad test — can be done anytime with device access."
+        "title": "ISS-026: EVM Framework Gap",
+        "subtitle": "Earned Value meaningless at 132x velocity",
+        "content": "When a project completes in 25 minutes what was estimated to take 55.6 hours, every EVM metric becomes absurd. CPI of 141.7 provides no actionable insight. SPI of 4.0+ is not a meaningful schedule performance indicator.\n\nThe framework gap is not a flaw in EVM — it's a signal that the estimation baseline was wrong by two orders of magnitude. Future AI-assisted projects need a new estimation paradigm before EVM can provide value."
       },
       {
         "id": "06",
-        "title": "Deployment Status",
-        "subtitle": "Live on Vercel, 3 production deploys",
-        "content": "Dashboard live at combo-d-dashboard.vercel.app. Three production deployments (one per sprint). Build time: ~12 seconds. Zero deployment failures. GitHub repo connected for push-to-deploy."
+        "title": "ISS-027: Product Outpaces Stakeholder Readiness",
+        "subtitle": "Dashboard done before Stan knows it exists",
+        "content": "The dashboard was conceptualized, built, and deployed before the primary stakeholder (Stan) had a chance to provide input on requirements or design. This is a new pattern: when development velocity is 132x, the product outpaces stakeholder readiness.\n\nRisk: Stan's first impression IS the acceptance test. There's no iterative feedback loop — the product arrived fully formed. If it doesn't match expectations, the rework cost is low (AI can rebuild fast), but the stakeholder confidence impact is real."
       },
       {
         "id": "07",
-        "title": "Quality Metrics",
-        "subtitle": "Zero TypeScript errors, clean build",
-        "content": "TypeScript strict mode: zero errors. ESLint: clean. Build: passes consistently. No runtime errors in production. Lighthouse performance score: estimated 90+ (static pages with minimal JS)."
+        "title": "ISS-028: Survivorship Bias Warning",
+        "subtitle": "132x is N=1, not a benchmark",
+        "content": "The 132x velocity multiplier comes from a single project with optimal conditions: well-defined scope, single developer, no legacy systems, no compliance requirements, no multi-team coordination. Presenting this as a general capability would be survivorship bias.\n\nRecommendation: when presenting to enterprise prospects, frame 132x as 'what we observed on an internal project' not 'what you can expect.' The CloudSync analysis (91 minutes for a complex enterprise project) is a more representative benchmark."
       },
       {
         "id": "08",
         "title": "Co-Pilot Analysis",
-        "subtitle": "Ready for stakeholder review",
-        "content": "The dashboard is functionally complete and demo-ready. The Co-Pilot recommends scheduling Stan's review this week while momentum is high. The conditional items are low-effort and can be resolved in a single session."
+        "subtitle": "Ready for review, bias warnings",
+        "content": "The dashboard is ready for stakeholder review. The Co-Pilot flags two biases to watch: (1) Survivorship bias — celebrating the 132x multiplier without acknowledging it's N=1, and (2) Anchoring bias — if Stan's first reaction sets the anchor, it will be hard to course-correct.\n\nRecommendation: schedule Stan's review with a structured feedback form, not an open-ended 'what do you think?' conversation."
       },
       {
         "id": "09",
         "title": "Knowledge Log",
-        "subtitle": "6 new entries",
-        "content": "6 new entries bring total to 29. New patterns: conditional-go-is-the-norm (most internal tools ship with conditions), earned-value-works-for-small-projects (EV tracking validated even at micro scale), deploy-early-deploy-often (3 deploys in 2 days kept feedback loop tight)."
+        "subtitle": "4 new entries",
+        "content": "4 new entries bring total to 29. Key new patterns: evm-framework-gap (EVM meaningless at >10x velocity), stakeholder-readiness-gap (product outpaces stakeholder input cycle), survivorship-bias (N=1 velocity claim), conditional-go-is-the-norm (internal tools ship with conditions)."
       }
     ]
   },
@@ -273,22 +273,114 @@
     "id": 5,
     "name": "Validation",
     "phase": "Quality Gate",
-    "runTime": null,
-    "docsProduced": 0,
-    "gate": "PENDING",
-    "gateColor": "navy",
-    "summary": "Awaiting monitoring completion to begin validation phase.",
-    "documents": []
+    "runTime": "7 min",
+    "docsProduced": 7,
+    "gate": "PASS — Grade B (89.5%)",
+    "gateColor": "green",
+    "summary": "16/19 tests PASS, 3 CONDITIONAL, 0 FAIL. Functionality 95, Usability 92, Reliability 88, Performance 85, Security 70. Chain confirmation bias flagged.",
+    "documents": [
+      {
+        "id": "01",
+        "title": "Quality Report",
+        "subtitle": "Grade B — 89.5% composite score",
+        "content": "5-dimension quality assessment: Functionality 95% (all features work, comparison view adds value), Usability 92% (clean design, intuitive navigation, mobile responsive), Reliability 88% (zero runtime errors, TypeScript strict, but no automated tests), Performance 85% (fast builds, static pages, but no Lighthouse baseline), Security 70% (no auth, no input sanitization — acceptable for internal demo).\n\nWeighted composite: 89.5% — Grade B. The security score prevents an A grade, which is appropriate for an MVP without authentication."
+      },
+      {
+        "id": "02",
+        "title": "Test Results",
+        "subtitle": "16 PASS, 3 CONDITIONAL, 0 FAIL",
+        "content": "19 validation tests executed. PASS (16): project selector renders, project cards link correctly, agent pipeline displays, document accordion expands, KB table sorts, KB search filters, governance cards render, status editor saves, assessment radar renders, breadcrumbs navigate, mobile sidebar toggles, comparison page loads, favicon displays, meta tags present, build passes, deployment succeeds.\n\nCONDITIONAL (3): Lighthouse score not measured (CONDITIONAL — needs manual test), auth not implemented (CONDITIONAL — acceptable for MVP), automated test suite absent (CONDITIONAL — TypeScript serves as partial substitute)."
+      },
+      {
+        "id": "03",
+        "title": "ISS-030: Chain Confirmation Bias",
+        "subtitle": "Chain validates itself without external check",
+        "content": "The PM Agent Chain analyzed the Combo D Dashboard — a product built BY the chain's creator to showcase the chain. This creates a confirmation bias risk: the chain is predisposed to find positive results in a project designed to demonstrate its value.\n\nThe B grade partially mitigates this concern (an unbiased assessment wouldn't produce a perfect score), but the risk remains. External validation from an independent reviewer would strengthen the assessment's credibility."
+      },
+      {
+        "id": "04",
+        "title": "ISS-031: 'AI Code Is Correct' Is Untested",
+        "subtitle": "No unit tests, no integration tests",
+        "content": "The dashboard was built entirely by AI-assisted development. All code was generated by Claude Code and accepted after visual review. No unit tests, no integration tests, no end-to-end tests exist.\n\nThe belief that 'AI code is correct because the build passes and it looks right' is an untested assumption. TypeScript catches type errors but not logic errors. For an internal demo, this risk is acceptable. For production use with client data, it is not."
+      },
+      {
+        "id": "05",
+        "title": "Defect Register",
+        "subtitle": "2 defects found, both fixed",
+        "content": "DEF-001: Mobile hamburger menu overlaps page title at 375px. Status: FIXED (added pt-14 on mobile). DEF-002: Combo D project card showed stale data. Status: FIXED (data files updated).\n\nBoth defects were found through dogfooding, not testing — reinforcing the dogfooding-reveals-gaps pattern from the knowledge base."
+      },
+      {
+        "id": "06",
+        "title": "Co-Pilot Analysis",
+        "subtitle": "Confirmation bias acknowledged",
+        "content": "The Co-Pilot acknowledges the confirmation bias risk (ISS-030) and notes that the B grade is consistent with the project's actual maturity: functionally complete, well-designed, but lacking in testing infrastructure and security.\n\nThe Co-Pilot's final assessment: 'This dashboard is demo-ready and represents the chain's capabilities accurately. The Grade B is honest. An A would have required automated tests and authentication — investments not justified for an MVP.'"
+      },
+      {
+        "id": "07",
+        "title": "Knowledge Log",
+        "subtitle": "3 new entries",
+        "content": "3 new entries bring total to 32. New patterns: confirmation-bias (chain assessing its own showcase project), testing-assumption (AI code correctness untested), verification-gap (visual review as sole quality gate).\n\nThe Validation agent's most important contribution is not the B grade — it's the honest acknowledgment of what wasn't tested."
+      }
+    ]
   },
   {
     "id": 6,
     "name": "Closing",
     "phase": "Knowledge Base",
-    "runTime": null,
-    "docsProduced": 0,
-    "gate": "PENDING",
+    "runTime": "7 min",
+    "docsProduced": 8,
+    "gate": "CLOSED — Grade B (89.5%)",
     "gateColor": "navy",
-    "summary": "Not yet started.",
-    "documents": []
+    "summary": "Retrospective with 5 Whys to 2 root causes. 12 lessons learned (2 critical). 35 final KB entries. 10 prevention rules. Chain self-assessment B+. Feedback loop to Agent 1 closed.",
+    "documents": [
+      {
+        "id": "01",
+        "title": "Retrospective",
+        "subtitle": "5 Whys → 2 root causes",
+        "content": "5 Whys analysis on the two most significant findings:\n\nFinding 1: EVM produces meaningless results. Why? → Velocity 132x above baseline. Why? → AI-assisted development. Why? → Estimation paradigm hasn't adapted. Why? → No prior data on AI-assisted project metrics. ROOT CAUSE: The PM profession lacks an estimation framework for AI-assisted development.\n\nFinding 2: Product outpaced stakeholder readiness. Why? → Development completed in hours, not weeks. Why? → AI velocity eliminated the natural feedback window. Why? → No stakeholder checkpoint was built into the sprint plan. ROOT CAUSE: Sprint cadences designed for human velocity don't create natural review points at AI velocity."
+      },
+      {
+        "id": "02",
+        "title": "Lessons Learned",
+        "subtitle": "12 lessons, 2 critical",
+        "content": "CRITICAL (2):\n1. AI-assisted development requires a new estimation paradigm. Traditional PM metrics (EVM, velocity, capacity planning) produce misleading results at >10x velocity differential. New frameworks needed.\n2. At AI velocity, stakeholder review must be event-triggered (per deployment), not time-triggered (per sprint). The product arrives before the feedback cycle.\n\nIMPORTANT (4):\n3. Scope discipline is the strongest predictor of on-time delivery.\n4. Dogfooding with real data is the most effective testing strategy for dashboards.\n5. 132x velocity is N=1 — do not generalize without more data points.\n6. Chain confirmation bias is real — external validation needed for credibility.\n\nINFORMATIONAL (6):\n7. TypeScript strict mode catches data mismatches early.\n8. JSON file storage works for <100 entries but won't scale.\n9. Deploy-early-deploy-often keeps feedback loops tight.\n10. Card-based layouts suit PMO audiences.\n11. Color-coded status systems are universally understood.\n12. SVG radar charts are effective for maturity visualization."
+      },
+      {
+        "id": "03",
+        "title": "Knowledge Base Summary",
+        "subtitle": "35 entries across 6 clusters",
+        "content": "Final KB: 35 entries across 6 clusters.\n\nCluster distribution: Estimation Paradigm Mismatch (7 entries — DOMINANT, CRITICAL), Optimism/Self-Assessment (6 entries), Technical Architecture (6 entries), UI/UX Patterns (4 entries), Stakeholder & Demo (4 entries), Quality & Testing (4 entries), Data Structure (2 entries), Deployment (2 entries).\n\nThe estimation-paradigm-mismatch cluster is the project's signature contribution to the chain's knowledge base."
+      },
+      {
+        "id": "04",
+        "title": "Prevention Playbook",
+        "subtitle": "10 prevention rules",
+        "content": "10 prevention rules distilled from the Combo D analysis:\n\n1. IF project uses AI-assisted development THEN apply 0.6-0.7x multiplier to traditional estimates.\n2. IF AI velocity exceeds 10x THEN replace EVM with deployment-based progress tracking.\n3. IF development completes before stakeholder review THEN trigger immediate structured feedback session.\n4. IF sprint duration is <3 days THEN enforce hard scope freeze.\n5. IF building a viewer/dashboard THEN dogfood with real data before declaring MVP.\n6. IF velocity claim exceeds 50x THEN flag as N=1 and require additional data points.\n7. IF chain assesses its own showcase project THEN acknowledge confirmation bias in report.\n8. IF no automated tests exist THEN document this as an explicit risk, not an implicit assumption.\n9. IF product targets mobile users THEN require physical device test before stakeholder demo.\n10. IF demoing to PMO audience THEN lead with the analysis story, not the feature list."
+      },
+      {
+        "id": "05",
+        "title": "Chain Self-Assessment",
+        "subtitle": "B+ for methodology, A- for output",
+        "content": "The chain grades itself B+ overall for the Combo D analysis. Methodology adherence was strong: all 6 agents ran, all gates were assessed, knowledge base was populated, prevention rules were extracted.\n\nOutput quality rated A-: 54 documents produced, 35 KB entries, 10 prevention rules, comparison data generated. The main deduction: the chain didn't catch the estimation-paradigm-mismatch pattern until Agent 2, when it should have been flagged in Agent 1's complexity assessment.\n\nThe feedback loop is closed: Agent 1's complexity scoring algorithm should include an 'AI-assisted development' modifier in future runs."
+      },
+      {
+        "id": "06",
+        "title": "Feedback to Agent 1",
+        "subtitle": "Complexity scoring needs AI modifier",
+        "content": "Feedback to Agent 1 for future runs: the complexity scoring algorithm (currently 40/50 for Combo D) does not account for the development methodology. An AI-assisted project with 40/50 complexity delivers fundamentally differently than a traditional project with 40/50 complexity.\n\nRecommendation: add a 'development methodology' factor to the complexity model. AI-assisted projects should get a complexity reduction of 30-50% on execution dimensions, while retaining full complexity scores on governance, stakeholder, and organizational dimensions."
+      },
+      {
+        "id": "07",
+        "title": "Handoff Package",
+        "subtitle": "Executive summary for Stan",
+        "content": "One-page executive summary:\n\n• Project: Combo D Dashboard — PM Agent Chain visualization tool\n• Verdict: PASS — Grade B (89.5%)\n• Built in: ~48 minutes of chain analysis time, ~25 minutes of AI-assisted development\n• Delivered: 3 pages, 6 data views, 2 projects, comparison page\n• Key finding: AI-assisted development creates a 132x velocity multiplier that breaks traditional PM estimation frameworks\n• Live at: combo-d-dashboard.vercel.app\n• Next steps: Stan reviews dashboard, demo script prepared, Lighthouse test run\n\nClosing statement: 'Same chain, different projects, different outcomes. CloudSync showed governance failure. Combo D showed estimation paradigm shift. Both findings are valuable. Both were found in under 2 hours.'"
+      },
+      {
+        "id": "08",
+        "title": "Knowledge Log",
+        "subtitle": "3 final entries — total 35",
+        "content": "3 final entries close the Knowledge Log at 35 total. Closing entries document: (1) development-mode-config — need to ensure production config before enterprise demos, (2) event-triggered-communication — at AI velocity, stakeholder updates should be deployment-triggered not calendar-triggered, (3) n1-generalization-warning — the 132x multiplier is a single data point and must be presented as such.\n\nThe Combo D knowledge base is complete. It represents the chain's first analysis of an AI-assisted internal project — a fundamentally different profile from the enterprise CloudSync analysis."
+      }
+    ]
   }
 ]

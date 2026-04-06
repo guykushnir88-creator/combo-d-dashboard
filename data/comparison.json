@@ -1,0 +1,44 @@
+{
+  "projects": [
+    {
+      "name": "CloudSync HR Migration",
+      "client": "CloudSync Inc.",
+      "grade": "F",
+      "score": 62.9,
+      "verdict": "FAIL",
+      "agents": 6,
+      "duration_min": 91,
+      "documents": 45,
+      "kb_entries": 39,
+      "dominant_cluster": "Governance",
+      "dominant_tag": "decision-debt-accumulating",
+      "key_finding": "This project needs 4 decisions, not more analysis",
+      "bias_detected": ["optimism-bias", "anchoring-bias"],
+      "prevention_rules": 36
+    },
+    {
+      "name": "Combo D Dashboard",
+      "client": "Internal",
+      "grade": "B",
+      "score": 89.5,
+      "verdict": "PASS",
+      "agents": 6,
+      "duration_min": 48,
+      "documents": 54,
+      "kb_entries": 35,
+      "dominant_cluster": "Estimation Paradigm",
+      "dominant_tag": "estimation-paradigm-mismatch",
+      "key_finding": "132x velocity — traditional estimation breaks for AI-assisted development",
+      "bias_detected": ["optimism-bias-inverted", "planning-fallacy-inverted", "confirmation-bias", "survivorship-bias"],
+      "prevention_rules": 10
+    }
+  ],
+  "chain_evolution": {
+    "total_projects": 2,
+    "total_documents": 99,
+    "total_kb_entries": 74,
+    "unique_custom_tags": 20,
+    "lessons_learned": 12,
+    "chain_self_grade": "B+"
+  }
+}
